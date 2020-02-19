@@ -1,5 +1,3 @@
-Frontend: Vue / (tanár valoszinuleg angulart kér)
-
-Backend: NodeJs (Visual Studio Code) / PHP(Jetbrains PHP Storm) - Marton Benjámin
-
-Adatbázis: Mysql(MysqlWorkbench)
+Frontend: React 
+Backend: NodeJs 
+Adatbázis: Mysql
