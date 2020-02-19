@@ -1,0 +1,18 @@
+Felhasználók:
+	Látogató(Bejelentkezés nélkül nem tud vásárolni) -> bejelentkezés után: vásárló
+	vásárló(megrendelést tud leadni)
+	manager(el tudja fogadni a megrendeléseket,)
+	tervező, mérnökök
+	
+Use case diagramok(Draw.io)
+
+Agile módszertant követünk(kevesebb dokumentáció)
+Az issue valami, amivel törődni kell(feladat,bugfix,továbbfejlesztés...)
+Az egyes feladatokat issuekba kell szervezni.
+A feladat kiírásakor felsorolásokat ajánlott belerakni a jobb olvashatóság érdekében
+Checkboxokat rakjunk mellé, így lépésekbe szedjük.
+Feladatnak van felelőse!(Csapatvezetők törődnek vele és osztják ki)
+ReadME fájlokat csináljunk
+
+Feladat: Use caseket összerakni
+Issue-kat kiírni, barátkozni a rendszerrel
