@@ -1,0 +1,5 @@
+Frontend:
+
+Backend: NodeJs (Visual Studio Code) / PHP(Jetbrains PHP Storm) - Marton Benjámin
+
+Adatbázis: Mysql(MysqlWorkbench)
