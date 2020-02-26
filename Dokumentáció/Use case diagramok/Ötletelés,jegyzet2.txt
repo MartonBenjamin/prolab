@@ -35,3 +35,39 @@ branch merge:
     Docs
     backend
     frontend
+
+
+Rest API documentation
+	-usercase
+	-http
+	________________________
+	      Service Name
+	Description
+	Method (Get, Post, Delete, Put etc)	(http)
+	Path					(url path)
+	Parameters (Input)
+	 -query GET
+	 -JSON POST
+	 Path variables
+	Response OK
+	 JSON
+	Response Error +
+	 JSON, cause
+	Example
+	 c(opy)url
+
+
+JSON
+	object {}
+	array []
+	field "key": value,
+	
+	value:	object
+		array
+		literal
+		  string
+		  number
+		  true/false
+		  null
+
+Rest API dokumentáció készítése
