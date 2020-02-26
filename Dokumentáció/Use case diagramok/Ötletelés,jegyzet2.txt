@@ -1,0 +1,37 @@
+branch:
+  master:
+    Author<...>
+    TimeStamp
+    Message
+      Title (max 80 char)
+      Description
+      #Issue ID
+     
+Issue tracker:
+  #1 Title
+     Description
+     []
+  ____________________
+    Comments
+    //ha ezt valaki megérti, az csoda
+    
+branch merge:
+  1 Commit                      | Developer ˇ
+  2 Push                        |
+  3 Pull request                | Reviewer (Senior (Other Developer)) ˇ   <-Code Review
+    3.1 Change request => 1     |                                               - Code Quality (Readability etc)
+    3.2 Approval                |                                               - Run Tests
+  4 Merge                       |                                             => Fejlesztő "fejlesztése"
+    4.1 Resolve Conflicts       |
+  5 Close Issue                 |
+  6 ..? Branch                  |
+    (^ nem tudtuk kiolvasni)
+  
+  
+  Conflict: második merge-nél fellépő problematika (ha ugyanaz a fájl volt egyszerre fejlesztve)
+  
+  
+  GitRepo
+    Docs
+    backend
+    frontend
