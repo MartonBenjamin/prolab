@@ -107,7 +107,6 @@
   <tr>
     <td><p align="center">Parameters</p></td>
     <td><p> Request Headers:   
-       <li> user:username of the new user  </li>
 	    <li> user: UNIQUE username of the new user  </li>
 	    <li> password: password  </li>
 	    <li> email: email address in order to send informations  </li>
