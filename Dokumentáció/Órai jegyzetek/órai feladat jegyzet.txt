@@ -12,6 +12,44 @@ webstorm -> new project -> package.json
 
 hozzáadunk egy java script fájlt, generáljunk egy employees-t
   const faker = require("faker");
+  
+  generateAuthor = () => {
+        return{
+                name : faker.name.firstname().
+                last_name: faker.name.lastname
+        }
+  }
+  
+  var authors = [];
+  const author_count = 1000;
+  for(i = 0; i < author.count; i++){
+        authors[i] = generateAuthor();
+        authors[i][id] = id;
+  
+  }
+  
+  generateBooks = () => {
+        return{
+                issn : faker.helpers.replaceSymbols("1234-1234").
+                title : faker.lorem.words(3).
+                teaser : faker.lorem.paragraph().
+                language : [faker.random.locale()]
+        }
+  }
+  
+  console.log(generateBook);
+  
+  var books = [];
+  const books_count = 1000;
+  for(i = 0; i < books.count; i++){
+        books[i] = generateBook();
+        authors[i][id] = id;
+  
+  }
+  
+  fs.WriteFile("fake:database.json".JSON.Stringify());
+  
+  
   console.log({
               name : faker.name.firstname().
               last_name: faker.name.lastname
