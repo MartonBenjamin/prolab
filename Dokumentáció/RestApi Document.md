@@ -9,7 +9,7 @@
   </thead>
   <tr> 
     <td><p align="center">Description</p></td>
-    <td><p>The login operation requires two properties: one marked as user identity and the second is password.</p></td>
+    <td><p>The login operation requires two properties: one marked as user identity and second is password.</p></td>
   </tr>
     <td><p align="center">Method</p></td>
     <td><p>POST</p></td>
@@ -169,7 +169,7 @@
     <td><p>
       <li>-H Content-Type:application/json   </li>
       <li>-X GET   </li>
-      <li>-d '{"id": 37853, "name": guitar, "description": Electronic guitar, "available": 5}'  </li> 
+      <li>-d '{"id": 37853, "name": guitar, "description": Garage door, "available": 5}'  </li> 
       <li>-v https://localhost:8080/Inventory/Worker/List </li>
   </p></td> 
   </tr>  
@@ -215,7 +215,7 @@
     <td><p>
       <li>-H Content-Type:application/json   </li>
       <li>-X GET   </li>
-      <li>-d '{"id": 02451, "name": basketball, "description": High quality, "available": 7}'  </li> 
+      <li>-d '{"id": 02451, "name": basketball, "description": High quality, "available": 8}'  </li> 
       <li>-v https://localhost:8080/Inventory/Client/List </li>
   </p></td> 
   </tr>  
@@ -260,7 +260,7 @@
     <td><p>
       <li>-H Content-Type:application/json   </li>
       <li>-X PUT   </li>
-      <li>-d '{"id": 37853, "description": Electronic guitar Location: B sector, "available": 5}'  </li> 
+      <li>-d '{"id": 37853, "description": Garage door Location: B sector, "available": 5}'  </li> 
       <li>-v https://localhost:8080/Inventory/Worker/Set </li>
   </p></td> 
   </tr>  
@@ -306,7 +306,7 @@
     <td><p>
       <li>-H Content-Type:application/json   </li>
       <li>-X PUT   </li>
-      <li>-d '{"id": 37853, "description": Electronic guitar Assembly line: A10, "available": 5}'  </li> 
+      <li>-d '{"id": 37853, "description": Garage door Assembly line: A10, "available": 5}'  </li> 
       <li>-v https://localhost:8080/Inventory/AssemblyLine/Set </li>
   </p></td> 
   </tr>  
@@ -352,7 +352,7 @@
     <td><p>
       <li>-H Content-Type:application/json   </li>
       <li>-X PUT   </li>
-      <li>-d '{"id": 37853, "description": Electronic guitar Status: sold, "available": 5}'  </li> 
+      <li>-d '{"id": 37853, "description": Garage door Status: sold, "available": 5}'  </li> 
       <li>-v https://localhost:8080/Inventory/Client/Set </li>
   </p></td> 
   </tr>  
@@ -399,7 +399,7 @@
     <td><p>
       <li>-H Content-Type:application/json   </li>
       <li>-X POST   </li>
-      <li>-d '{"id": 37853, "description": Electronic guitar, "available": 0}'  </li> 
+      <li>-d '{"id": 37853, "description": Garage door, "available": 0}'  </li> 
       <li>-v https://localhost:8080/Inventory/TrackPackedProduct </li>
   </p></td> 
   </tr>  
