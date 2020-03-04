@@ -27,18 +27,18 @@
   </tr>
   <tr>
     <td><p align="center">Response OK</p></td>
-    <td><p>status_code : 201, description : Succesful login!</p></td>
+    <td><p>status_code : 201, description : The login is success!</p></td>
   </tr>
   <tr>
     <td><p align="center">Response Error</p></td>
-    <td><p>status_code: 401, description: Bad username or password!</p></td>
+    <td><p>status_code: 401, description: Wrong username or password!</p></td>
   </tr>  
   <tr>
     <td><p align="center">Curl</p></td>
     <td><p>
       <li>-H Content-Type:application/json   </li>
       <li>-X POST   </li>
-      <li>-d '{"login":"admin", "password":"admin"}'  </li> 
+      <li>-d '{"login":"root", "password":"root"}'  </li> 
       <li>-v https://localhost:8080/Inventory/login  </li>
   </p></td> 
   </tr>  
@@ -54,7 +54,7 @@
   </thead>
   <tr> 
     <td><p align="center">Description</p></td>
-    <td><p>The Logout operation terminates user session and disassociates the AuthenticatedUser role.
+    <td><p>The Logout operation terminates user session.
   </tr>
     <td><p align="center">Method</p></td>
     <td><p>GET</p></td>
@@ -71,11 +71,11 @@
   </tr>
   <tr>
     <td><p align="center">Response OK</p></td>
-    <td><p>status_code : 200,	description : Succesful logout!</p></td>
+    <td><p>status_code : 200,	description : The logout is success!</p></td>
   </tr>
   <tr>
     <td><p align="center">Response Error</p></td>
-    <td><p >status_code: 401, description: Invalid token!</p></td>
+    <td><p >status_code: 401, description: Invalid token, throw new InvalidTokenException!</p></td>
   </tr>  
   <tr>
     <td><p align="center">Curl</p></td>
@@ -109,20 +109,20 @@
     <td><p> Request Headers:   
        <li> user:username of the new user  </li>
 	    <li> user: UNIQUE username of the new user  </li>
-	    <li> password: password of the user  </li>
-	    <li> email: email adress in order to send informations  </li>
-	    <li> first_name: First name of the person</li>
-	    <li> last_name: Last name of the person</li>
-	    <li> created_at: The DATE of the creation</li>
+	    <li> password: password  </li>
+	    <li> email: email address in order to send informations  </li>
+	    <li> first_name: First name of the client</li>
+	    <li> last_name: Last name of the client</li>
+	    <li> created_at: The date of the creation</li>
   </p></td>
   </tr>
   <tr>
     <td><p align="center">Response OK</p></td>
-    <td><p>status_code : 201,	description : Register successful</p></td>
+    <td><p>status_code : 201,	description : Register is success</p></td>
   </tr>
   <tr>
     <td><p align="center">Response Error</p></td>
-    <td><p >status_code: 400, description: Missing parameters</p></td>
+    <td><p >status_code: 400, description: Missing parameters, throw new MissingParamsException</p></td>
   </tr>  
   <tr>
     
@@ -133,19 +133,19 @@
   <thead>
   <tr>
     <td><b><p align="center">Service name</p></b></td>
-    <td colspan=2><b><p align="center">ListInventoryForWorker</p></b></td>
+    <td colspan=2><b><p align="center">ListInventory</p></b></td>
   </tr>
   </thead>
   <tr> 
     <td><p align="center">Description</p></td>
-    <td><p>Returns json data about item list for Worker.</p></td>
+    <td><p>Returns json data about item list for garage doors.</p></td>
   </tr>
     <td><p align="center">Method</p></td>
     <td><p>GET</p></td>
   </tr>
   <tr>
     <td><p align="center">Path</p></td>
-    <td><p>Inventory/Worker/List</p></td>
+    <td><p>Inventory/Doors/List</p></td>
   </tr>
   <tr>
     <td><p align="center">Parameters</p></td>
@@ -158,11 +158,11 @@
   </tr>
   <tr>
     <td><p align="center">Response OK</p></td>
-    <td><p>status_code : 201, description : Succesful query!</p></td>
+    <td><p>status_code : 201, description : The query is success!</p></td>
   </tr>
   <tr>
     <td><p align="center">Response Error</p></td>
-    <td><p>status_code: 401, description: Unsuccesful query!</p></td>
+    <td><p>status_code: 401, description: Invalid query, something is missing!</p></td>
   </tr>  
   <tr>
     <td><p align="center">Curl</p></td>
@@ -175,24 +175,23 @@
   </tr>  
 </table>
 
-
 <table>
   <thead>
   <tr>
     <td><b><p align="center">Service name</p></b></td>
-    <td colspan=2><b><p align="center">ListInventoryForAssemblyLine</p></b></td>
+    <td colspan=2><b><p align="center">ListInventoryForClient</p></b></td>
   </tr>
   </thead>
   <tr> 
     <td><p align="center">Description</p></td>
-    <td><p>Returns json data about item list for AssemblyLine.</p></td>
+    <td><p>Returns json data about item list for Client.</p></td>
   </tr>
     <td><p align="center">Method</p></td>
     <td><p>GET</p></td>
   </tr>
   <tr>
     <td><p align="center">Path</p></td>
-    <td><p>Inventory/AssemblyLine/List</p></td>
+    <td><p>Inventory/Client/List</p></td>
   </tr>
   <tr>
     <td><p align="center">Parameters</p></td>
@@ -205,58 +204,11 @@
   </tr>
   <tr>
     <td><p align="center">Response OK</p></td>
-    <td><p>status_code : 201, description : Succesful query!</p></td>
+    <td><p>status_code : 201, description : The query is successful!</p></td>
   </tr>
   <tr>
     <td><p align="center">Response Error</p></td>
-    <td><p>status_code: 401, description: Unsuccesful query!</p></td>
-  </tr>  
-  <tr>
-    <td><p align="center">Curl</p></td>
-    <td><p>
-      <li>-H Content-Type:application/json   </li>
-      <li>-X GET   </li>
-      <li>-d '{"id": 17650, "name": book, "description": Clean code book, "available": 2}'  </li> 
-      <li>-v https://localhost:8080/Inventory/AssemblyLine/List </li>
-  </p></td> 
-  </tr>  
-</table>
-
-
-<table>
-  <thead>
-  <tr>
-    <td><b><p align="center">Service name</p></b></td>
-    <td colspan=2><b><p align="center">ListInventoryForSalesTeam</p></b></td>
-  </tr>
-  </thead>
-  <tr> 
-    <td><p align="center">Description</p></td>
-    <td><p>Returns json data about item list for SalesTeam.</p></td>
-  </tr>
-    <td><p align="center">Method</p></td>
-    <td><p>GET</p></td>
-  </tr>
-  <tr>
-    <td><p align="center">Path</p></td>
-    <td><p>Inventory/SalesTeam/List</p></td>
-  </tr>
-  <tr>
-    <td><p align="center">Parameters</p></td>
-    <td><p> Response Body:    
-       <li> "id" : value,   </li>
-       <li>"name" : value, </li> 
-       <li> "description" : value,   </li>
-       <li> "available" : value   </li>
-  </p></td>
-  </tr>
-  <tr>
-    <td><p align="center">Response OK</p></td>
-    <td><p>status_code : 201, description : Succesful query!</p></td>
-  </tr>
-  <tr>
-    <td><p align="center">Response Error</p></td>
-    <td><p>status_code: 401, description: Unsuccesful query!</p></td>
+    <td><p>status_code: 401, description: something is missing!</p></td>
   </tr>  
   <tr>
     <td><p align="center">Curl</p></td>
@@ -264,58 +216,10 @@
       <li>-H Content-Type:application/json   </li>
       <li>-X GET   </li>
       <li>-d '{"id": 02451, "name": basketball, "description": High quality, "available": 7}'  </li> 
-      <li>-v https://localhost:8080/Inventory/SalesTeam/List </li>
+      <li>-v https://localhost:8080/Inventory/Client/List </li>
   </p></td> 
   </tr>  
 </table>
-
-
-<table>
-  <thead>
-  <tr>
-    <td><b><p align="center">Service name</p></b></td>
-    <td colspan=2><b><p align="center">ListInventoryForPurchuseDepartment</p></b></td>
-  </tr>
-  </thead>
-  <tr> 
-    <td><p align="center">Description</p></td>
-    <td><p>Returns json data about item list for PurchuseDepartment.</p></td>
-  </tr>
-    <td><p align="center">Method</p></td>
-    <td><p>GET</p></td>
-  </tr>
-  <tr>
-    <td><p align="center">Path</p></td>
-    <td><p>Inventory/PurchuseDepartment/List</p></td>
-  </tr>
-  <tr>
-    <td><p align="center">Parameters</p></td>
-    <td><p> Response Body:    
-       <li> "id" : value,   </li>
-       <li>"name" : value, </li> 
-       <li> "description" : value,   </li>
-       <li> "available" : value   </li>
-  </p></td>
-  </tr>
-  <tr>
-    <td><p align="center">Response OK</p></td>
-    <td><p>status_code : 201, description : Succesful query!</p></td>
-  </tr>
-  <tr>
-    <td><p align="center">Response Error</p></td>
-    <td><p>status_code: 401, description: Unsuccesful query!</p></td>
-  </tr>  
-  <tr>
-    <td><p align="center">Curl</p></td>
-    <td><p>
-      <li>-H Content-Type:application/json   </li>
-      <li>-X GET   </li>
-      <li>-d '{"id": 92356, "name": calculator, "description": Sencor calculator, "available": 1}'  </li> 
-      <li>-v https://localhost:8080/Inventory/PurchuseDepartment/List </li>
-  </p></td> 
-  </tr>  
-</table>
-
 
  <table>
   <thead>
@@ -413,12 +317,12 @@
   <thead>
   <tr>
     <td><b><p align="center">Service name</p></b></td>
-    <td colspan=2><b><p align="center">SetInventoryForSalesTeam</p></b></td>
+    <td colspan=2><b><p align="center">SetInventoryForClient</p></b></td>
   </tr>
   </thead>
   <tr> 
     <td><p align="center">Description</p></td>
-    <td><p>The sales team can mark the sold products in the description.</p></td>
+    <td><p>The client can mark sold products in the description.</p></td>
   </tr>
     <td><p align="center">Method</p></td>
     <td><p>PUT</p></td>
@@ -437,11 +341,11 @@
   </tr>
   <tr>
     <td><p align="center">Response OK</p></td>
-    <td><p>status_code : 201, description : Succesful query!</p></td>
+    <td><p>status_code : 201, description :query is success!</p></td>
   </tr>
   <tr>
     <td><p align="center">Response Error</p></td>
-    <td><p>status_code: 401, description: Unsuccesful query!</p></td>
+    <td><p>status_code: 401, description: Invalid query!</p></td>
   </tr>  
   <tr>
     <td><p align="center">Curl</p></td>
@@ -449,54 +353,7 @@
       <li>-H Content-Type:application/json   </li>
       <li>-X PUT   </li>
       <li>-d '{"id": 37853, "description": Electronic guitar Status: sold, "available": 5}'  </li> 
-      <li>-v https://localhost:8080/Inventory/SalesTeam/Set </li>
-  </p></td> 
-  </tr>  
-</table>
-
-
- <table>
-  <thead>
-  <tr>
-    <td><b><p align="center">Service name</p></b></td>
-    <td colspan=2><b><p align="center">SetInventoryForPurchaseDepartment</p></b></td>
-  </tr>
-  </thead>
-  <tr> 
-    <td><p align="center">Description</p></td>
-    <td><p>The purchase department can insert a new product into the database.</p></td>
-  </tr>
-    <td><p align="center">Method</p></td>
-    <td><p>POST</p></td>
-  </tr>
-  <tr>
-    <td><p align="center">Path</p></td>
-    <td><p>Inventory/PurchuseDepartment/Set</p></td>
-  </tr>
-  <tr>
-    <td><p align="center">Parameters</p></td>
-    <td><p> Request Body:    
-       <li> "id" : value,   </li>
-       <li> "name" : value, </li> 
-       <li> "description" : value,   </li>
-       <li> "available" : value   </li>
-  </p></td>
-  </tr>
-  <tr>
-    <td><p align="center">Response OK</p></td>
-    <td><p>status_code : 201, description : Succesful query!</p></td>
-  </tr>
-  <tr>
-    <td><p align="center">Response Error</p></td>
-    <td><p>status_code: 401, description: Unsuccesful query!</p></td>
-  </tr>  
-  <tr>
-    <td><p align="center">Curl</p></td>
-    <td><p>
-      <li>-H Content-Type:application/json   </li>
-      <li>-X POST   </li>
-      <li>-d '{"id": 37853, "description": Electronic guitar, "available": 0}'  </li> 
-      <li>-v https://localhost:8080/Inventory/PurchuseDepartment/Set </li>
+      <li>-v https://localhost:8080/Inventory/Client/Set </li>
   </p></td> 
   </tr>  
 </table>
@@ -535,7 +392,7 @@
   </tr>
   <tr>
     <td><p align="center">Response Error</p></td>
-    <td><p>status_code: 401, description: Product not found!</p></td>
+    <td><p>status_code: 401, description: Product is missing!</p></td>
   </tr>  
   <tr>
     <td><p align="center">Curl</p></td>
