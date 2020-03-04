@@ -261,7 +261,7 @@
       <li>-H Content-Type:application/json   </li>
       <li>-X PUT   </li>
       <li>-d '{"id": 37853, "description": Garage door Location: B sector, "available": 5}'  </li> 
-      <li>-v https://localhost:8080/Inventory/Worker/Set </li>
+      <li>-v https://localhost:8080/Inventory/Set </li>
   </p></td> 
   </tr>  
 </table>
