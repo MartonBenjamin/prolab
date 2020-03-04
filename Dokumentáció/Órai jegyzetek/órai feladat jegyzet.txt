@@ -1,0 +1,19 @@
+Következő feladat: Frontend
+Client: ki kell adni a kéréseket, amiket írtunk a RestApi-ban
+        action, component, dispacher -> store: handler
+        
+faker: fake adatokat generál, JSON server: ezekből szervert épít fel
+
+leprogramozni a fakert
+
+webstorm -> new project -> package.json
+"faker": "4.1.0"
+"json-server": "0.16.1" 
+
+hozzáadunk egy java script fájlt, generáljunk egy employees-t
+  const faker = require("faker");
+  console.log({
+              name : faker.name.firstname().
+              last_name: faker.name.lastname
+  }); 
+  
