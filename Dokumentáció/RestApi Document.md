@@ -86,6 +86,48 @@
   </tr>  
 </table>
 
+<table>
+  <thead>
+   <tr>
+    <td><b><p align="center">Service name</p></b></td>
+    <td colspan=2><b><p align="center">Register</p></b></td>
+  </tr>
+  </thead>
+  <tr> 
+    <td><p align="center">Description</p></td>
+    <td><p>Registers user
+  </tr>
+    <td><p align="center">Method</p></td>
+    <td><p>PUT</p></td>
+  </tr>
+  <tr>
+    <td><p align="center">Path</p></td>
+    <td><p>Inventory/Register</p></td>
+  </tr>
+  <tr>
+    <td><p align="center">Parameters</p></td>
+    <td><p> Request Headers:   
+       <li> user:username of the new user  </li>
+	    <li> user: UNIQUE username of the new user  </li>
+	    <li> password: password of the user  </li>
+	    <li> email: email adress in order to send informations  </li>
+	    <li> first_name: First name of the person</li>
+	    <li> last_name: Last name of the person</li>
+	    <li> created_at: The DATE of the creation</li>
+  </p></td>
+  </tr>
+  <tr>
+    <td><p align="center">Response OK</p></td>
+    <td><p>status_code : 201,	description : Register successful</p></td>
+  </tr>
+  <tr>
+    <td><p align="center">Response Error</p></td>
+    <td><p >status_code: 400, description: Missing parameters</p></td>
+  </tr>  
+  <tr>
+    
+  </tr>  
+</table>
 
 <table>
   <thead>
