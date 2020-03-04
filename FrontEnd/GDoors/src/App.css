@@ -1,0 +1,94 @@
+/*
+nav{
+display:flex;
+justify-content: space-around;
+align-items: center;
+min-height:  10vh;
+background: rgb(64, 76, 80);
+color: white;
+}
+.nav-links{
+  width:  40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+
+}*/
+.center{
+  
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+  
+}
+.rightside{
+  
+    position: absolute;
+    right: 0px;
+    width: 300px;
+    border: 3px solid rgb(0, 0, 0);
+    padding: 10px;
+  
+}
+.leftside {
+  position: absolute;
+  left: 0px;
+  width: 300px;
+  border: 3px solid rgb(0, 0, 0);
+  padding: 10px;
+}
+.navStyle
+{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+h1{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+.NavBarr{
+
+  background-image: url(http://getwallpapers.com/wallpaper/full/5/6/4/1085832-widescreen-simple-backgrounds-1920x1080-mobile.jpg);
+  background-color: violet;
+}
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(51,51,51,0.7);
+  z-index: 10;
+  background-image: url(http://getwallpapers.com/wallpaper/full/6/0/7/1085611-new-simple-backgrounds-2560x1440-pictures.jpg);
+  overflow: auto;
+}
+.leftside{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  background: linear-gradient(to right top,#1FA2FF,#12D8FA,#A6FFCB);
+}
+.rightside{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  background: linear-gradient(to right top,#1FA2FF,#12D8FA,#A6FFCB);
+}
+.Reginner{
+  display: flex;
+  justify-content: space-around;
+  align-items: right;
+  list-style: none;
+  color: white;
+  right:0 ;
+
+}

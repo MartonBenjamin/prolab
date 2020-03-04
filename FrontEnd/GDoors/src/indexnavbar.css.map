@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EAC/B,AAAA,WAAW,CAAC,cAAc,CAAC;IACzB,QAAQ,EAAE,iBAAiB;IAC3B,KAAK,EAAE,IAAI;GACZ",
+    "sources": [
+        "indexnavbar.scss"
+    ],
+    "names": [],
+    "file": "indexnavbar.css"
+}
