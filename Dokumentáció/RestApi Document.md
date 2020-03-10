@@ -27,7 +27,8 @@
   </tr>
   <tr>
     <td><p align="center">Response OK</p></td>
-    <td><p>status_code : 201, description : The login is success!</p></td>
+    <td><p>status_code : 201, description : The login is success!</p>
+	    <p>login_token: token of the user</p></td>
   </tr>
   <tr>
     <td><p align="center">Response Error</p></td>
@@ -149,15 +150,16 @@
   <tr>
     <td><p align="center">Parameters</p></td>
     <td><p> Response Body:    
-       <li> "id" : value,   </li>
-       <li>"name" : value, </li> 
-       <li> "description" : value,   </li>
-       <li> "available" : value  </li>
+       
   </p></td>
   </tr>
   <tr>
     <td><p align="center">Response OK</p></td>
-    <td><p>status_code : 201, description : The query is success!</p></td>
+    <td><p>status_code : 201, description : The query is success!
+	<li> "id" : value,   </li>
+       <li>"name" : value, </li> 
+       <li> "description" : value,   </li>
+       <li> "available" : value  </li></p></td>
   </tr>
   <tr>
     <td><p align="center">Response Error</p></td>
@@ -195,15 +197,16 @@
   <tr>
     <td><p align="center">Parameters</p></td>
     <td><p> Response Body:    
-       <li> "id" : value,   </li>
-       <li>"name" : value, </li> 
-       <li> "description" : value,   </li>
-       <li> "available" : value   </li>
+       <li> "clientid" : value,   </li>
   </p></td>
   </tr>
   <tr>
     <td><p align="center">Response OK</p></td>
-    <td><p>status_code : 201, description : The query is successful!</p></td>
+    <td><p>status_code : 201, description : The query is successful!
+	<li> "id" : value,   </li>
+       <li>"name" : value, </li> 
+       <li> "description" : value,   </li>
+       <li> "available" : value   </li></p></td>
   </tr>
   <tr>
     <td><p align="center">Response Error</p></td>
@@ -242,13 +245,15 @@
     <td><p align="center">Parameters</p></td>
     <td><p> Request Body:    
        <li> "id" : value,    </li>
-        <li>"description" : value, </li> 
-		<li>"available" : value </li> 
+
   </p></td>
   </tr>
   <tr>
     <td><p align="center">Response OK</p></td>
-    <td><p>status_code : 201, description : Succesful query!</p></td>
+    <td><p>status_code : 201, description : Succesful query!
+	<li> "id" : value,    </li>
+        <li>"description" : value, </li> 
+	<li>"available" : value </li> </p></td>
   </tr>
   <tr>
     <td><p align="center">Response Error</p></td>
@@ -288,13 +293,13 @@
     <td><p align="center">Parameters</p></td>
     <td><p> Request Body:    
        <li> "id" : value,    </li>
-        <li>"description" : value, </li> 
-		<li>"available" : value </li> 
   </p></td>
   </tr>
   <tr>
     <td><p align="center">Response OK</p></td>
-    <td><p>status_code : 201, description : Succesful query!</p></td>
+    <td><p>status_code : 201, description : Succesful query!
+	<li>"description" : value, </li> 
+	<li>"available" : value </li> </p></td>
   </tr>
   <tr>
     <td><p align="center">Response Error</p></td>
@@ -334,13 +339,15 @@
     <td><p align="center">Parameters</p></td>
     <td><p> Request Body:    
        <li> "id" : value,    </li>
-        <li>"description" : value, </li> 
-		<li>"available" : value </li> 
   </p></td>
   </tr>
   <tr>
     <td><p align="center">Response OK</p></td>
-    <td><p>status_code : 201, description :query is success!</p></td>
+    <td><p>status_code : 201, description :query is success!
+	<li> "id" : value,    </li>
+        <li>"description" : value, </li> 
+	<li>"available" : value </li> 
+  </p></td></p></td>
   </tr>
   <tr>
     <td><p align="center">Response Error</p></td>
@@ -380,14 +387,15 @@
     <td><p align="center">Parameters</p></td>
     <td><p> Request Body:    
        <li> "id" : value,   </li>
-       <li> "name" : value, </li> 
-       <li> "description" : value,   </li>
-       <li> "available" : value   </li>
   </p></td>
   </tr>
   <tr>
     <td><p align="center">Response OK</p></td>
-    <td><p>status_code : 201, description : Product found!</p></td>
+    <td><p>status_code : 201, description : Product found!
+	<li> "id" : value,   </li>
+       <li> "name" : value, </li> 
+       <li> "description" : value,   </li>
+       <li> "available" : value   </li></p></td>
   </tr>
   <tr>
     <td><p align="center">Response Error</p></td>
