@@ -1,0 +1,14 @@
+controller a beérkező requesteket és responsekat elkapja 
+	parsolja az adatokat, kapcsolatot tart a kliens és a szerver között(endpoint)
+	klienstől érkező adatokat ő validálja
+DAO
+	data access object
+	service számára szolgáltatást nyújt, hogy hogyan lehet ki-be rakni az adatbázisból
+	CRUD műveleteket valósít meg
+core
+	saját modellosztályaink 
+	
+csinálunk egy új file-t Routes alá
+
+
+Sajnos az appot nem igazán tudtam jegyzetelni
