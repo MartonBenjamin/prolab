@@ -16,18 +16,18 @@
   </tr>
   <tr>
     <td><p align="center">Path</p></td>
-    <td><p>Inventory/login</p></td>
+    <td><p>users/login</p></td>
   </tr>
   <tr>
     <td><p align="center">Parameters</p></td>
     <td><p> Request Body:    
-       <li> "login" : value,    </li>
+       <li> "username" : value,    </li>
         <li>"password" : value, </li> 
   </p></td>
   </tr>
   <tr>
     <td><p align="center">Response OK</p></td>
-    <td><p>status_code : 201, description : The login is success!</p></td>
+    <td><p>status_code : 201, description : Login success!, token:jsontoken</p></td> 
   </tr>
   <tr>
     <td><p align="center">Response Error</p></td>
@@ -39,7 +39,7 @@
       <li>-H Content-Type:application/json   </li>
       <li>-X POST   </li>
       <li>-d '{"login":"root", "password":"root"}'  </li> 
-      <li>-v https://localhost:8080/Inventory/login  </li>
+      <li>-v https://localhost:3000/users/login  </li>
   </p></td> 
   </tr>  
 </table>
@@ -61,7 +61,7 @@
   </tr>
   <tr>
     <td><p align="center">Path</p></td>
-    <td><p>Inventory/logout</p></td>
+    <td><p>users/logout</p></td>
   </tr>
   <tr>
     <td><p align="center">Parameters</p></td>
@@ -81,7 +81,7 @@
     <td><p align="center">Curl</p></td>
     <td><p>
       <li>-H user-token:[`value-of-user-token-from-login`]  </li>    
-      <li>-v https://localhost:8080/Inventory/logout  </li>
+      <li>-v https://localhost:3000/users/logout  </li>
   </p></td> 
   </tr>  
 </table>
@@ -102,32 +102,63 @@
   </tr>
   <tr>
     <td><p align="center">Path</p></td>
-    <td><p>Inventory/Register</p></td>
+    <td><p>users/register</p></td>
   </tr>
   <tr>
     <td><p align="center">Parameters</p></td>
     <td><p> Request Headers:   
-       <li> user:username of the new user  </li>
-	    <li> user: UNIQUE username of the new user  </li>
+	    <li> username: UNIQUE username of the new user  </li>
 	    <li> password: password  </li>
 	    <li> email: email address in order to send informations  </li>
 	    <li> first_name: First name of the client</li>
 	    <li> last_name: Last name of the client</li>
-	    <li> created_at: The date of the creation</li>
+	    <li> date: The date of the creation ex: 2020-01-01</li>
   </p></td>
   </tr>
   <tr>
     <td><p align="center">Response OK</p></td>
-    <td><p>status_code : 201,	description : Register is success</p></td>
+    <td><p>status_code : 201,	description : Successfully registered</p></td>
   </tr>
   <tr>
     <td><p align="center">Response Error</p></td>
-    <td><p >status_code: 400, description: Missing parameters, throw new MissingParamsException</p></td>
+    <td><p >status_code: 400, description: Missing parameters.</p></td>
   </tr>  
   <tr>
     
   </tr>  
 </table>
+
+<table>
+  <thead>
+   <tr>
+    <td><b><p align="center">Service name</p></b></td>
+    <td colspan=2><b><p align="center">GetUsers</p></b></td>
+  </tr>
+  </thead>
+  <tr> 
+    <td><p align="center">Description</p></td>
+	  <td><p>List everything about users but password.<p>:id is optional. If its not given gets all the users.</p></p></td>
+  </tr>
+    <td><p align="center">Method</p></td>
+    <td><p>get</p></td>
+  </tr>
+  <tr>
+    <td><p align="center">Path</p></td>
+    <td><p>users/:id</p></td>
+  </tr>
+  <tr>
+    <td><p align="center">Response OK</p></td>
+    <td><p>success : 1,	data : results</p></td>
+  </tr>
+  <tr>
+    <td><p align="center">Response Error</p></td>
+    <td><p >success: 0, message: There is no user with the given ID.</p></td>
+  </tr>  
+  <tr>
+    
+  </tr>  
+</table>
+
 
 <table>
   <thead>
