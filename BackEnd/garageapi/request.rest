@@ -1,4 +1,5 @@
-POST http://localhost:3000/users/register
+POST http://localhost:8888/users/register
+//POST http://localhost:3000/users/register
 GET http:
 
 ###//localhost:3000/users/add
