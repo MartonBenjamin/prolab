@@ -2,8 +2,12 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import React from 'react';
-import logo from './logo.svg';
+//import React from 'react';
+//import logo from './logo.svg';
+
+
+
+
 import { BrowserRouter,Switch ,Route,Link } from "react-router-dom";
 import Shop from './Shop';
 
@@ -12,7 +16,7 @@ import Nav2 from './Nav2';
 import SignIn from './Singin';
 import SignUp from './SingUp';
 
-import Infobutton from './Infobutton';
+import Infobutton from './InfoButton';
 import './App.css';
 import RightBar from './RightBar';
 
