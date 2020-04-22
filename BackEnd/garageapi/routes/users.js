@@ -3,32 +3,16 @@ var router = express.Router();
 var mysql = require('mysql');
 var passwordHash = require('password-hash');
 
-var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "garagedoordatabase"
-});
-
-con.connect(function(err) {
-  if (err) throw err;
-  console.log("Successfully connected to garageDoor database!");
-});
+const userController = require('../controllers/user');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
-router.get('/add', function(req, res, next) {
-  if (err) throw err;
-  //var sql = "INSERT INTO `garagedoordatabase`.`users` (`username`, `password`, `email`, `firstname`, `lastname`, `created_at`) VALUES ('tesztss', 'test', 'asds@asd.hu', 'name', 'keds', '2018-12-12');\n";
-  con.query(sql, function (err, result) {
-    if (err) throw err;
-    console.log("1 record inserted");
-  });
-});
-router.post('/register',function (req,res) {
+router.get('/getAll', userController.get_all_users);
+
+/*router.post('/register',function (req,res) {
   try {
     const hashedPassword=passwordHash.generate(req.body.password); //Jelszó hashelése
     var values = [
@@ -43,7 +27,7 @@ router.post('/register',function (req,res) {
     var sql = "INSERT INTO users (username, password, email, firstname, lastname, created_at) VALUES ('"+req.body.username+"','"+hashedPassword+"','"+req.body.email+"','"+req.body.first_name+"','"+req.body.last_name+"','2018-12-12')";
 
     con.query(sql,[values],function(err,result){
-        if (err) return console.log(err);
+      if (err) return console.log(err);
       console.log("Successfully registered");
     });
     res.status(201).send();
@@ -58,5 +42,6 @@ router.post('/register',function (req,res) {
 router.get('/listuser',function(req,res){
   console.log(users);
 });
-
+*/
 module.exports = router;
+

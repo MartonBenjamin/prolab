@@ -1,0 +1,8 @@
+planning poker // issuek osztályozása bonyolultság alapján
+https://en.wikipedia.org/wiki/Planning_poker
+meg kell saccolni a feladatokat, mennyire nehezek, majd osztályozni planning pokerrel
+(mindenki milyen nehéznek találja)
+
+online scrum planning poker link:
+  - https://scrumpoker.online/session/290604
+  - https://www.scrumpoker.online/join/290604?token=7IWDS8Ve9y9dJ1cHfmVwJ/
