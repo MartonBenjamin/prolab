@@ -10,8 +10,6 @@ const{
     login
 } = require("../controllers/usercontroller");
 
-
-
 router.post('/register', createUser);
 router.get('/:id',checkToken,getUserById);
 router.get('/', checkToken, getUsers);

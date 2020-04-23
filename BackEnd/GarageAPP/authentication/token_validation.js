@@ -12,6 +12,7 @@ module.exports = {
                     });
                 } else {
                     req.decoded = decoded;
+                    console.log(token);
                     next();
                 }
             });

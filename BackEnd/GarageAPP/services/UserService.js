@@ -77,5 +77,20 @@ module.exports = {
         else{
             return "Permission denied";
         }
-    }
+    },
+    addToken: (data,callBack) =>{
+        pool.query(
+            'UPDATE users SET token = ? WHERE username=?',
+            [
+                data.token,
+                data.username
+            ],
+            (error) => {
+                if(error){
+                    return callBack(error);
+                }
+                return callBack(null);
+            }
+        );
+    },
 };

@@ -1,4 +1,4 @@
-const { create, getUserById, getUsers, deleteUser, getUserByUsername } = require("../services/UserService");
+const { create, getUserById, getUsers, deleteUser, getUserByUsername, addToken } = require("../services/UserService");
 const {hashSync, genSaltSync, compareSync} = require('bcrypt');
 const { sign } = require("jsonwebtoken");
 const keys = require('../config/auth');
@@ -90,6 +90,16 @@ module.exports= {
             if(correct){
                 const payload ={id: results.id, username: results.username};
                 const jsontoken = sign(/*{correct:results}*/payload, keys.secretOrKey,{expiresIn: "1h"});
+                const data = {
+                    username: body.username,
+                    token: jsontoken
+                };
+                addToken(data,(err) =>{
+                    if(err){
+                        console.log(err);
+                    }
+                    }
+                );
                 return res.json({
                     status_code:201,
                     description:"Login success",
