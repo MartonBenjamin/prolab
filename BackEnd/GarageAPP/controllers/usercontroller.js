@@ -2,7 +2,7 @@ const { create, getUserById, getUsers, deleteUser, getUserByUsername } = require
 const {hashSync, genSaltSync, compareSync} = require('bcrypt');
 const { sign } = require("jsonwebtoken");
 const keys = require('../config/auth');
-
+const passport = require('passport');
 
 module.exports= {
     createUser: (req, res) => {
@@ -89,7 +89,7 @@ module.exports= {
             const correct =compareSync(body.password,results.password) ;
             if(correct){
                 const payload ={id: results.id, username: results.username};
-                const jsontoken = sign(/*{correct:results}*/payload, keys.secretOrKey,{expiresIn: "2h"});
+                const jsontoken = sign(/*{correct:results}*/payload, keys.secretOrKey,{expiresIn: "1h"});
                 return res.json({
                     status_code:201,
                     description:"Login success",
