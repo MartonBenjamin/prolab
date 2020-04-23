@@ -1,10 +1,14 @@
 const { create, getUserById, getUsers, deleteUser, getUserByUsername } = require("../services/UserService");
-const passwordHash = require('password-hash');
-const compareSync = require('bcrypt');
+const {hashSync, genSaltSync, compareSync} = require('bcrypt');
+const { sign } = require("jsonwebtoken");
+const keys = require('../config/auth');
+
+
 module.exports= {
     createUser: (req, res) => {
         const body = req.body;
-        body.password = passwordHash.generate(body.password);
+        const salt = genSaltSync(10);
+        body.password = hashSync(body.password,salt);
         create(body, (err, results) => {
             if (err) {
                 console.log(err);
@@ -79,16 +83,13 @@ module.exports= {
             if(!results){
                 return res.json({
                     success:0,
-                    data:"Hibás felhasználónév vagy rossz jelszó."
+                    data:"Wrong username"
                 });
             }
-            const result = compareSync(body.password, results.password);
-            if(results){
-                results.password=undefined;
-                //TODO: jsontokent kell majd generálni
-                const jsontoken = sign({result:results},"asdasd",{
-                    expiresIn: "2h"
-                });
+            const correct =compareSync(body.password,results.password) ;
+            if(correct){
+                const payload ={id: results.id, username: results.username};
+                const jsontoken = sign(/*{correct:results}*/payload, keys.secretOrKey,{expiresIn: "2h"});
                 return res.json({
                     status_code:201,
                     description:"Login success",
@@ -98,7 +99,7 @@ module.exports= {
             else{
                 return res.json({
                     status_code:401,
-                    description: "Wrong username or password!"
+                    description: "Incorrect password!"
                 });
             }
         });

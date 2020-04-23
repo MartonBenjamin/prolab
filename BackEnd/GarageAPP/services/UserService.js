@@ -2,6 +2,8 @@ const pool = require('../config/db');
 
 module.exports = {
     create: (data,callBack) =>{
+        var date = new Date();
+        date = date.toISOString();
         pool.query(
             'INSERT INTO users (username, password, email, firstname, lastname, created_at) ' +
             'VALUES(?,?,?,?,?,?)',
@@ -11,7 +13,7 @@ module.exports = {
                 data.email,
                 data.first_name,
                 data.last_name,
-                '2012-12-12'
+                date
             ],
             (error,results,fields) =>{
                 if(error){//ha van result, akkor error null, ha nem, akkor hibánk van
@@ -50,11 +52,11 @@ module.exports = {
         pool.query(
             'select * from users where username = ?',
             [username],
-            (error,results,fields) => {
+            (error,results) => {
                 if(error){
                     return callBack(error);
                 }
-                return callBack(null,results)[0];
+                return callBack(null,results[0]);
             }
         );
     },
