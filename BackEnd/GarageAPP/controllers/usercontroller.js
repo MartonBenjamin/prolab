@@ -2,7 +2,6 @@ const { create, getUserById, getUsers, deleteUser, getUserByUsername, addToken }
 const {hashSync, genSaltSync, compareSync} = require('bcrypt');
 const { sign } = require("jsonwebtoken");
 const keys = require('../config/auth');
-const passport = require('passport');
 
 module.exports= {
     createUser: (req, res) => {
@@ -33,8 +32,7 @@ module.exports= {
             }
             if (!results) {
                 return res.json({
-                    success: 0,
-                    message: "There is no user with the given ID."
+                    message: "There is no user with the ID:"+id
                 });
             }
             return res.json({

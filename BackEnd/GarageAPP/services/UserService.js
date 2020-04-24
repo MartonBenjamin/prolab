@@ -93,4 +93,16 @@ module.exports = {
             }
         );
     },
+    getUserByToken: (token,callBack) =>{
+        pool.query(
+            'select username from users where token = ?',
+            [token],
+            (error,results) => {
+                if(error){
+                    return callBack(error);
+                }
+                return callBack(null,results[0]);
+            }
+        );
+    },
 };
