@@ -1,4 +1,5 @@
 const {getMaterials} = require('../services/MaterialService');
+const {getStyles} = require('../services/StyleService');
 
 module.exports = {
     getMaterials: (req, res) => {
@@ -14,6 +15,16 @@ module.exports = {
         });
     },
     getStyles:(req,res)=>{
-        
+        getStyles((err,results) =>{
+            if(err){
+                console.log(err);
+                return;
+            }
+            return res.json({
+                success: 1,
+                data: results
+            });
+        });
+
     },
 };
