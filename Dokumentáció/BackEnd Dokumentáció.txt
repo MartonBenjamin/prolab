@@ -1,0 +1,86 @@
+BackEnd fejlesztők: Márton Benjámin, Sass-Gyarmati Norbert
+
+Fejlesztői környezet: WebStorm NodeJS
+
+controllers:
+
+- garagedoorcontroller.js: 
+    a fent említett javascriptet a következő funkciókkal láttuk el: 
+      - addGarageDoor: hozzá tudunk adni az adatbázishoz egy létrehozott garázs ajtót, 
+      mely hibát dob, ha az adatbázisban hiba merül fel
+      - getDoorById: egy egyedi kulcs(id) alapján kikérhetjük az adatbázisból az id-hez
+      tartozó garázs ajtót. Hibát dob, ha nem található ajtó a megadott id alapján.
+      -getDoors: Lekérhetjük az adatbázisból az összes feltöltött ajtókat
+      -deleteDoor: id alapján törölhetjük a hozzárendelt ajtót az adatbázisunkból.
+      Hibát dob, ha nincs a megadott id-hez hozzárendelt ajtó.
+      
+-usercontroller.js:
+  a fent említett javascriptet a következő funkciókkal láttuk el: 
+    -createUser: hozzá tudunk adni az adatbázishoz egy létrehozott felhasználót, 
+      mely hibát dob, ha az adatbázisban hiba merül fel.
+    -getUserById: egy egyedi kulcs(id) alapján kikérhetjük az adatbázisból az id-hez
+      tartozó felhasználó adatait. Hibát dob, ha nem található ajtó a megadott id alapján.
+    -getUsers: Lekérhetjük az adatbázisból az összes feltöltött felhasználókat
+    -deleteUser: id alapján törölhetjük a hozzárendelt felhasználót az adatbázisunkból.
+      Hibát dob, ha nincs a megadott id-hez hozzárendelt felhasználó.
+    -login: bejelentkeztet egy felhasználót, ezáltal átirányítja egy következő panelra.
+    Hibát dobhat, ha nincs ilyen felhasználó az adatbázisban, illetve ha hamis adatokkal
+    próbál a felhasználó bejelentkezni.
+    
+    
+Services:
+
+-UserSevice.js:
+  a fent említett javascriptet a következő funkciókkal láttuk el: 
+    - create: létrehoz egy felhasználót az alábbi adatokkal:
+      -username
+      -password
+      -email
+      -firstname
+      -lastname
+      -created_at
+    -getUserById: egy egyedi kulcs(id) alapján kikérhetjük az adatbázisból az id-hez
+      tartozó felhasználó adatait. Hibát dob, ha nem található ajtó a megadott id alapján.
+    -getUsers: Lekérhetjük az adatbázisból az összes feltöltött felhasználókat
+    -deleteUser: id alapján törölhetjük a hozzárendelt felhasználót az adatbázisunkból.
+      Hibát dob, ha nincs a megadott id-hez hozzárendelt felhasználó.
+    -login: bejelentkeztet egy felhasználót, ezáltal átirányítja egy következő panelra.
+    Hibát dobhat, ha nincs ilyen felhasználó az adatbázisban, illetve ha hamis adatokkal
+    próbál a felhasználó bejelentkezni.
+    -addToken: felhasználók létrehozásakor, illetve bejelentkezésekor létrehoz egy tokent,
+    mely egyedi azonosítóval bír.
+    -getUserByToken: a felhasználókat nem csak id alapján lehet lekérni, hanem token alapján is,
+    a token is egy egyedi azonosító(kulcs)
+    
+ -GaragedoorService.js:
+  a fent említett javascriptet a következő funkciókkal láttuk el: 
+    -create: létrehoz egy felhasználót az alábbi adatokkal:
+      -name         : garázs ajtónk neve
+      -description  : leírás a megadott ajtóról
+      -width        : megadott ajtó szélessége
+      -height       : megadott ajtó magassága
+      -material     : megadott ajtó anyaga(fém, műanyag, fa, üveg)
+      -style        : megadott ajtónak a kialakítása(balról jobbra nyíló, felfelé nyíló, középen nyíló)
+      -smartdoor    : két értékkel bír, igen/nem. A megadoot ajtó automatikusan kinyílik, vagy manuálisan 
+      
+      
+      
+    
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
