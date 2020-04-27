@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="044fc7f5-1a5f-4d2f-9529-a1026a0e9340" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/controllers/garagedoorcontroller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/garagedoorcontroller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/GaragedoorService.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/GaragedoorService.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +61,7 @@
       <workItem from="1587734410071" duration="1729000" />
       <workItem from="1587918250110" duration="1097000" />
       <workItem from="1587987597303" duration="2224000" />
-      <workItem from="1588008765815" duration="176000" />
+      <workItem from="1588008765815" duration="475000" />
     </task>
     <servers />
   </component>

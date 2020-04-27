@@ -25,7 +25,8 @@ module.exports = {
             }
         );
     },
-    /*getUsers: callBack =>{
+    /*
+    getDoors: callBack =>{
         pool.query(
             'select id, username, firstname, lastname, email from users',
             [],
@@ -38,6 +39,9 @@ module.exports = {
 
         );
     },
+
+     */
+    /*
     getUserById: (id,callBack) =>{
         pool.query(
             'select id, username, firstname, lastname, email from users where id = ?',
