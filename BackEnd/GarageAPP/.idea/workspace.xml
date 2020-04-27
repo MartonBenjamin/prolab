@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="044fc7f5-1a5f-4d2f-9529-a1026a0e9340" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../test/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/garagedoorcontroller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/garagedoorcontroller.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +30,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="12.16.1" />
+    <property name="javascript.nodejs.core.library.configured.version" value="13.12.0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../test" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -62,6 +60,7 @@
       <workItem from="1587734410071" duration="1729000" />
       <workItem from="1587918250110" duration="1097000" />
       <workItem from="1587987597303" duration="2224000" />
+      <workItem from="1588008765815" duration="176000" />
     </task>
     <servers />
   </component>
