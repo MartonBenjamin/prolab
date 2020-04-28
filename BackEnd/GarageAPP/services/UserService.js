@@ -105,4 +105,16 @@ module.exports = {
             }
         );
     },
+    getUserIdByToken: (token,callBack) =>{
+        pool.query(
+            'select id from users where token = ?',
+            [token],
+            (error,results) => {
+                if(error){
+                    return callBack(error);
+                }
+                return callBack(null,results[0]);
+            }
+        );
+    },
 };
