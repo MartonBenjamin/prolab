@@ -476,3 +476,43 @@
   </p></td> 
   </tr>  
 </table>
+
+<table>
+  <thead>
+   <tr>
+    <td><b><p align="center">Service name</p></b></td>
+    <td colspan=2><b><p align="center">addImage</p></b></td>
+  </tr>
+  </thead>
+  <tr> 
+    <td><p align="center">Description</p></td>
+    <td><p>Add Image to the last order. You can add n images to order by calling it n times. YOU CAN ONLY ADD IMAGES TO THE LAST INSERTED ORDER!
+  </tr>
+    <td><p align="center">Method</p></td>
+    <td><p>POST</p></td>
+  </tr>
+  <tr>
+    <td><p align="center">Path</p></td>
+    <td><p>orders/addImage</p></td>
+  </tr>
+  <tr>
+    <td><p align="center">Parameters</p></td>
+    <td><p>   
+       <li> path: path of the image  </li>       
+  </p></td>
+  </tr>
+  <tr>
+    <td><p align="center">Response OK</p></td>
+    <td><p>status_code : 201,	description : Image added successfully to order: ordernum</p></td>
+  </tr>
+  <tr>
+    <td><p align="center">Response Error</p></td>
+    <td><p >status_code: 400, description: Database error: + error/p></td>
+  </tr>  
+  <tr>
+    <td><p align="center">Curl</p></td>
+    <td><p>
+      <li>-v https://localhost:3000/orders/addImage  </li>
+  </p></td> 
+  </tr>  
+</table>
