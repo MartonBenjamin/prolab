@@ -25,10 +25,10 @@ module.exports = {
             }
         );
     },
-    /*
+
     getDoors: callBack =>{
         pool.query(
-            'select id, username, firstname, lastname, email from users',
+            'select id, name, description, width, height, material, style, smartdoor from garagedoors',
             [],
             (error,results,fields) => {
                 if(error){
@@ -40,11 +40,11 @@ module.exports = {
         );
     },
 
-     */
-    /*
-    getUserById: (id,callBack) =>{
+
+
+    getDoorById: (id,callBack) =>{
         pool.query(
-            'select id, username, firstname, lastname, email from users where id = ?',
+            'select id, name, description, width, height, material, style, smartdoor from garagedoors where id = ?',
             [id],
             (error,results,fields) => {
                 if(error){
@@ -54,10 +54,12 @@ module.exports = {
             }
         );
     },
-    getUserByUsername: (username,callBack) =>{
+
+    /*
+    getDoorsByName: (name,callBack) =>{
         pool.query(
-            'select * from users where username = ?',
-            [username],
+            'select * from garagedoors where name = ?',
+            [name],
             (error,results) => {
                 if(error){
                     return callBack(error);
@@ -66,11 +68,15 @@ module.exports = {
             }
         );
     },
-    deleteUser: (data, callBack) =>{
+
+     */
+
+
+    deleteDoor: (data, callBack) =>{
         if(true)//TODO: Jogosultság
         {
             pool.query(
-                'delete from users where id =?',
+                'delete from garagedoors where id =?',
                 [data.id],
                 (error,results,fields) =>{
                     if (error){
@@ -84,6 +90,8 @@ module.exports = {
             return "Permission denied";
         }
     },
+
+    /*
     addToken: (data,callBack) =>{
         pool.query(
             'UPDATE users SET token = ? WHERE username=?',
