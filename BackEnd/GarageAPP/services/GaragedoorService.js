@@ -55,6 +55,7 @@ module.exports = {
         );
     },
 
+    /*
     getDoorsByName: (name,callBack) =>{
         pool.query(
             'select * from garagedoors where name = ?',
@@ -67,6 +68,8 @@ module.exports = {
             }
         );
     },
+    
+     */
 
 
     deleteDoor: (data, callBack) =>{
