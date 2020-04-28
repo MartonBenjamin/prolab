@@ -435,3 +435,44 @@
   </p></td> 
   </tr>  
 </table>
+
+<table>
+  <thead>
+   <tr>
+    <td><b><p align="center">Service name</p></b></td>
+    <td colspan=2><b><p align="center">placeOrder</p></b></td>
+  </tr>
+  </thead>
+  <tr> 
+    <td><p align="center">Description</p></td>
+    <td><p>Places an order request into the database.
+  </tr>
+    <td><p align="center">Method</p></td>
+    <td><p>POST</p></td>
+  </tr>
+  <tr>
+    <td><p align="center">Path</p></td>
+    <td><p>orders/place</p></td>
+  </tr>
+  <tr>
+    <td><p align="center">Parameters</p></td>
+    <td><p> Request Headers:   
+       <li> Authorization: usertoken  </li>       
+  </p></td>
+  </tr>
+  <tr>
+    <td><p align="center">Response OK</p></td>
+    <td><p>status_code : 202,	description : Order sent successfully.</p></td>
+  </tr>
+  <tr>
+    <td><p align="center">Response Error</p></td>
+    <td><p >status_code: 400, description: Database error: + error/p></td>
+  </tr>  
+  <tr>
+    <td><p align="center">Curl</p></td>
+    <td><p>
+      <li>-H user-token:[`value-of-user-token-from-login`]  </li>    
+      <li>-v https://localhost:3000/orders/place  </li>
+  </p></td> 
+  </tr>  
+</table>
