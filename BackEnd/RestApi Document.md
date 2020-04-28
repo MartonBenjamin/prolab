@@ -462,7 +462,7 @@
   </tr>
   <tr>
     <td><p align="center">Response OK</p></td>
-    <td><p>status_code : 202,	description : Order sent successfully.</p></td>
+    <td><p>status_code : 201,	description : Order sent successfully.</p></td>
   </tr>
   <tr>
     <td><p align="center">Response Error</p></td>
