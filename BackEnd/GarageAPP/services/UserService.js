@@ -40,7 +40,7 @@ module.exports = {
         pool.query(
             'select id, username, firstname, lastname, email from users where id = ?',
             [id],
-            (error,results,fields) => {
+            (error,results) => {
                 if(error){
                     return callBack(error);
                 }
