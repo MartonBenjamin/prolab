@@ -5,7 +5,7 @@ module.exports = {
         var date = new Date();
         date = date.toISOString();
         pool.query(
-            'INSERT INTO garagedoors (name, description, width, height, material, style, smartdoor, craft_date) ' +
+            'INSERT INTO garagedoors (name, description, width, height, material, style, smartdoor, craft_date, ordernum) ' +
             'VALUES(?,?,?,?,?,?,?,?)',
             [
                 data.name,
@@ -15,7 +15,8 @@ module.exports = {
                 data.material,
                 data.style,
                 data.smartdoor,
-                date
+                date,
+                ordernum
             ],
             (error,results,fields) =>{
                 if(error){//ha van result, akkor error null, ha nem, akkor hibánk van
@@ -28,12 +29,16 @@ module.exports = {
 
     getDoors: callBack =>{
         pool.query(
-            'select id, name, description, width, height, material, style, smartdoor from garagedoors',
+            'select garagedoors.name, garagedoors.description, garagedoors.width, garagedoors.height, materials.material_name, style.style_description, garagedoors.smartdoor from garagedoors ' +
+            'INNER JOIN materials  ON garagedoors.material=materials.id ' +
+            'INNER JOIN style ON garagedoors.style=style.id',
             [],
             (error,results,fields) => {
                 if(error){
                     return callBack(error);
                 }
+
+                //console.log(results);
                 return callBack(null,results);
             }
 
@@ -44,7 +49,9 @@ module.exports = {
 
     getDoorById: (id,callBack) =>{
         pool.query(
-            'select id, name, description, width, height, material, style, smartdoor from garagedoors where id = ?',
+            'select garagedoors.name, garagedoors.description, garagedoors.width, garagedoors.height, materials.material_name, style.style_description, garagedoors.smartdoor from garagedoors ' +
+            'INNER JOIN materials ON garagedoors.material=materials.id ' +
+            'INNER JOIN style ON garagedoors.style=style.id where garagedoors.id = ? ',
             [id],
             (error,results,fields) => {
                 if(error){
@@ -91,32 +98,4 @@ module.exports = {
         }
     },
 
-    /*
-    addToken: (data,callBack) =>{
-        pool.query(
-            'UPDATE users SET token = ? WHERE username=?',
-            [
-                data.token,
-                data.username
-            ],
-            (error) => {
-                if(error){
-                    return callBack(error);
-                }
-                return callBack(null);
-            }
-        );
-    },
-    getUserByToken: (token,callBack) =>{
-        pool.query(
-            'select username from users where token = ?',
-            [token],
-            (error,results) => {
-                if(error){
-                    return callBack(error);
-                }
-                return callBack(null,results[0]);
-            }
-        );
-    },*/
 };

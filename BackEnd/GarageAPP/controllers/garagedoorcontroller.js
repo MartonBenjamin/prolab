@@ -1,5 +1,5 @@
-const {create} = require('../services/GaragedoorService')
 
+const {getDoors,getDoorById,create,deleteDoor} = require('../services/GaragedoorService')
 module.exports= {
     addGaragedoor: (req, res) => {
         const body = req.body;
@@ -7,13 +7,13 @@ module.exports= {
             if (err) {
                 console.log(err);
                 return res.status(500).json({
-                    success: 0,
-                    message: "Database connection error"
+                    status_code: 400,
+                    description: "Database error:" + err
                 });
             }
             return res.status(200).json({
                 status_code: 201,
-                description: "Successfully registered",
+                description: "Successfully added to order",
                 data: results
             });
         });
@@ -44,6 +44,7 @@ module.exports= {
                 console.log(err);
                 return;
             }
+            console.log(results);
             return res.json({
                 success: 1,
                 data: results
