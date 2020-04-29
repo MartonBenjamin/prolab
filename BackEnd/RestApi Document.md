@@ -435,3 +435,131 @@
   </p></td> 
   </tr>  
 </table>
+
+<table>
+  <thead>
+   <tr>
+    <td><b><p align="center">Service name</p></b></td>
+    <td colspan=2><b><p align="center">placeOrder</p></b></td>
+  </tr>
+  </thead>
+  <tr> 
+    <td><p align="center">Description</p></td>
+    <td><p>Places an order request into the database.
+  </tr>
+    <td><p align="center">Method</p></td>
+    <td><p>POST</p></td>
+  </tr>
+  <tr>
+    <td><p align="center">Path</p></td>
+    <td><p>orders/place</p></td>
+  </tr>
+  <tr>
+    <td><p align="center">Parameters</p></td>
+    <td><p> Request Headers:   
+       <li> Authorization: usertoken  </li>       
+  </p></td>
+  </tr>
+  <tr>
+    <td><p align="center">Response OK</p></td>
+    <td><p>status_code : 201,	description : Order sent successfully.</p></td>
+  </tr>
+  <tr>
+    <td><p align="center">Response Error</p></td>
+    <td><p >status_code: 400, description: Database error: + error/p></td>
+  </tr>  
+  <tr>
+    <td><p align="center">Curl</p></td>
+    <td><p>
+      <li>-H user-token:[`value-of-user-token-from-login`]  </li>    
+      <li>-v https://localhost:3000/orders/place  </li>
+  </p></td> 
+  </tr>  
+</table>
+
+<table>
+  <thead>
+   <tr>
+    <td><b><p align="center">Service name</p></b></td>
+    <td colspan=2><b><p align="center">addImage</p></b></td>
+  </tr>
+  </thead>
+  <tr> 
+    <td><p align="center">Description</p></td>
+    <td><p>Add Image to the last order. You can add n images to order by calling it n times. YOU CAN ONLY ADD IMAGES TO THE LAST INSERTED ORDER!
+  </tr>
+    <td><p align="center">Method</p></td>
+    <td><p>POST</p></td>
+  </tr>
+  <tr>
+    <td><p align="center">Path</p></td>
+    <td><p>orders/addImage</p></td>
+  </tr>
+  <tr>
+    <td><p align="center">Parameters</p></td>
+    <td><p>   
+       <li> path: path of the image  </li>       
+  </p></td>
+  </tr>
+  <tr>
+    <td><p align="center">Response OK</p></td>
+    <td><p>status_code : 201,	description : Image added successfully to order: ordernum</p></td>
+  </tr>
+  <tr>
+    <td><p align="center">Response Error</p></td>
+    <td><p >status_code: 400, description: Database error: + error/p></td>
+  </tr>  
+  <tr>
+    <td><p align="center">Curl</p></td>
+    <td><p>
+      <li>-v https://localhost:3000/orders/addImage  </li>
+  </p></td> 
+  </tr>  
+</table>
+
+<table>
+  <thead>
+   <tr>
+    <td><b><p align="center">Service name</p></b></td>
+    <td colspan=2><b><p align="center">Add garage door</p></b></td>
+  </tr>
+  </thead>
+  <tr> 
+    <td><p align="center">Description</p></td>
+    <td><p>Add garagedoor into orders.
+  </tr>
+    <td><p align="center">Method</p></td>
+    <td><p>POST</p></td>
+  </tr>
+  <tr>
+    <td><p align="center">Path</p></td>
+    <td><p>garagedoors/addGaragedoor</p></td>
+  </tr>
+  <tr>
+    <td><p align="center">Parameters</p></td>
+    <td><p>   
+       <li> name: name of the door  </li>
+       <li> decription: short description about the door </li>
+       <li> width:  width of the door</li>
+       <li> height:  height of the door</li>
+       <li> material:  the ID of the material</li>
+       <li> style:  the ID of the style</li>
+       <li> smartdoor: 1 if smart 0 if not </li>
+       <li> ordernum:  the number of the order that you want to add the door</li>
+  </p></td>
+  </tr>
+  <tr>
+    <td><p align="center">Response OK</p></td>
+    <td><p>status_code : 201,	description : Successfully added to order!</p></td>
+  </tr>
+  <tr>
+    <td><p align="center">Response Error</p></td>
+    <td><p >status_code: 400, description: Database error: + error/p></td>
+  </tr>  
+  <tr>
+    <td><p align="center">Curl</p></td>
+    <td><p>
+      <li>-v https://localhost:3000/garagedoors/addDoor  </li>
+  </p></td> 
+  </tr>  
+</table>
