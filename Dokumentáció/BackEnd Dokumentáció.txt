@@ -1,4 +1,4 @@
-BackEnd fejlesztők: Márton Benjámin, Sass-Gyarmati Norbert
+﻿BackEnd fejlesztők: Marton Benjámin, Sass-Gyarmati Norbert
 
 Fejlesztői környezet: WebStorm NodeJS
 
@@ -26,6 +26,9 @@ controllers:
     -login: bejelentkeztet egy felhasználót, ezáltal átirányítja egy következő panelra.
     Hibát dobhat, ha nincs ilyen felhasználó az adatbázisban, illetve ha hamis adatokkal
     próbál a felhasználó bejelentkezni.
+-ordercontroller.js:
+ a fent említett javascriptet a következő funkciókkal láttuk el: 
+	-placeOrder: adatbázishoz adja a leadott rendelési igényt.
     
     
 Services:
@@ -63,7 +66,12 @@ Services:
       -style        : megadott ajtónak a kialakítása(balról jobbra nyíló, felfelé nyíló, középen nyíló)
       -smartdoor    : két értékkel bír, igen/nem. A megadoot ajtó automatikusan kinyílik, vagy manuálisan 
       
-      
+ -OrderController.js
+  a fent említett javascriptet a következő funkciókkal láttuk el:      
+	-placeOrder: a felhasználó rendelési igényét rögzíti az adatbázisban
+		szükséges paraméterek:
+			-ordered_by	:	a megrendelő id-ja
+			-description	:	a megrendelő leírása a rendelés kiegészítése végett. 
       
     
     
