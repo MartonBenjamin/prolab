@@ -3,7 +3,7 @@ var router = express.Router();
 
 const {addGaragedoor,getDoors,getDoorById} = require('../controllers/garagedoorcontroller');
 
-router.post('/addGaragedoor', addGaragedoor);
+router.post('/addDoor', addGaragedoor);
 router.get('/', getDoors);
 router.get('/:id', getDoorById);
 

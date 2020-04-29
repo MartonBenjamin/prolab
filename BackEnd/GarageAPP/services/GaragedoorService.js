@@ -5,7 +5,7 @@ module.exports = {
         var date = new Date();
         date = date.toISOString();
         pool.query(
-            'INSERT INTO garagedoors (name, description, width, height, material, style, smartdoor, craft_date) ' +
+            'INSERT INTO garagedoors (name, description, width, height, material, style, smartdoor, craft_date, ordernum) ' +
             'VALUES(?,?,?,?,?,?,?,?)',
             [
                 data.name,
@@ -15,7 +15,8 @@ module.exports = {
                 data.material,
                 data.style,
                 data.smartdoor,
-                date
+                date,
+                ordernum
             ],
             (error,results,fields) =>{
                 if(error){//ha van result, akkor error null, ha nem, akkor hibánk van
