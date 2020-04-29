@@ -1,5 +1,5 @@
-const {create} = require('../services/GaragedoorService')
 
+const {getDoors,getDoorById,create,deleteDoor} = require('../services/GaragedoorService')
 module.exports= {
     addGaragedoor: (req, res) => {
         const body = req.body;
@@ -44,6 +44,7 @@ module.exports= {
                 console.log(err);
                 return;
             }
+            console.log(results);
             return res.json({
                 success: 1,
                 data: results
