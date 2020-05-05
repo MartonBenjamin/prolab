@@ -2,7 +2,13 @@ BackEnd fejlesztők: Marton Benjámin, Sass-Gyarmati Norbert
 
 Fejlesztői környezet: WebStorm NodeJS
 
+
+
+-------------------------------------------------------------------------------------------
 controllers:
+
+
+
 
 - garagedoorcontroller.js: 
     a fent említett javascriptet a következő funkciókkal láttuk el: 
@@ -26,16 +32,47 @@ controllers:
     -login: bejelentkeztet egy felhasználót, ezáltal átirányítja egy következő panelra.
     Hibát dobhat, ha nincs ilyen felhasználó az adatbázisban, illetve ha hamis adatokkal
     próbál a felhasználó bejelentkezni.
--ordercontroller.js:
- a fent említett javascriptet a következő funkciókkal láttuk el: 
-	-placeOrder: adatbázishoz adja a leadott rendelési igényt.
 - OrderController.js:
 	a fent említett javascriptet a következő funkciókkal láttuk el: 
-	- placeOrder: itt tudunk rendeléseket leadni, dokumentálni. A funkciónk további
-	részekkel
+	- placeOrder: itt tudunk rendeléseket leadni, dokumentálni. adatbázishoz adja a leadott rendelési igényt.
+	A funkciónk további részekkel van ellátva:
+		-getUserIdByToken: Token alapján kaphatjuk meg az adott kliens id-jét(egyedi kulcs)
+	- addImage: képeket is fellehet tölteni az adottmegrendelésre
+- PermissionService.js:
+	a fent említett javascriptet a következő funkciókkal láttuk el: 
+	-  HowToUsePermission: itt lehet állítani az adott kliens rangját, engedélyt lehet adni
+	különböző jogosultságokra. Szoftverünk rangjai, engedélyei:
+		- User: Felhasználói rang, minden regisztrált kliens ebben a rangban van
+		- Engineer: Mérnöki rang, jogosultságuk van hibát javítani, 
+		- Worker: Munkás rang, jogosultságuk van a megrendelések karbantartására, felügyeletére
+		- Support: támogatói rang
+		- Manager: menedzseri rang
+		- Supervisor: felügyelői rang
+		
+		
+- SelectController.js:
+	a fent említett javascriptet a következő funkciókkal láttuk el:
+	- getMaterials: meg tudjuk adni az adott termék anyagát, milyen anyagból készült.
+	Ilyen anyagok:
+		- fa
+		- műanyag
+		- fém
+	- getStyles: meg tudjuk adni az adott garázs kapu stílusát. Ilyen stílus lehet:
+		- középen nyíló
+		- balról jobbra nyíló
+		- felfelé nyíló
+
+
+	
     
-    
+-----------------------------------------------------------------------------------------------
+
+
+
 Services:
+
+
+
 
 -UserSevice.js:
   a fent említett javascriptet a következő funkciókkal láttuk el: 
@@ -70,12 +107,192 @@ Services:
       -style        : megadott ajtónak a kialakítása(balról jobbra nyíló, felfelé nyíló, középen nyíló)
       -smartdoor    : két értékkel bír, igen/nem. A megadoot ajtó automatikusan kinyílik, vagy manuálisan 
       
- -OrderController.js
+ -OrderService.js
   a fent említett javascriptet a következő funkciókkal láttuk el:      
 	-placeOrder: a felhasználó rendelési igényét rögzíti az adatbázisban
 		szükséges paraméterek:
 			-ordered_by	:	a megrendelő id-ja
 			-description	:	a megrendelő leírása a rendelés kiegészítése végett. 
+	
+	
+	
+- MaterialService.js:
+	a fent említett javascriptet a következő funkciókkal láttuk el:
+	- getMaterials: meg tudjuk adni az adott termék anyagát, milyen anyagból készült.
+	Ilyen anyagok:
+		- fa
+		- műanyag
+		- fém
+	
+	
+- PartsService.js:	
+	a fent említett javascriptet a következő funkciókkal láttuk el:
+	- getParts: különböző alkatrészeket tudunk lekérni az adatbázisból, azt a célt szolgálja
+	hogy meg lehessen nézni az alkatrészek mennyiségét.
+	
+	- orderParts: különböző alkatrészeket lehet megrendelni a webshopba, az adatbázisunk id alapján 
+	kéri le az alkatrészeket. ha van eredmény, akkor az error null értéket ad vissza, ha nem, akkor
+	hibát eredményez a rendszer.
+	
+	- orderCompleted: sikeres rendelés esetén visszatér a rendelt alkatrész id, illetve árával.
+	
+	- getPartsToDoor: alkatrészelket szállít az megrendelni kíván ajtóhoz
+- PermissionService.js:
+	a fent említett javascriptet a következő funkciókkal láttuk el:
+	-  HowToUsePermission: itt lehet állítani az adott kliens rangját, engedélyt lehet adni
+	különböző jogosultságokra. Szoftverünk rangjai, engedélyei:
+		- User: Felhasználói rang, minden regisztrált kliens ebben a rangban van
+		- Engineer: Mérnöki rang, jogosultságuk van hibát javítani, 
+		- Worker: Munkás rang, jogosultságuk van a megrendelések karbantartására, felügyeletére
+		- Support: támogatói rang
+		- Manager: menedzseri rang
+		- Supervisor: felügyelői rang
+
+- StyleService.js:
+	a fent említett javascriptet a következő funkciókkal láttuk el:
+	- getStyles: meg tudjuk adni az adott garázs kapu stílusát. Ilyen stílus lehet:
+		- középen nyíló
+		- balról jobbra nyíló
+		- felfelé nyíló
+
+
+
+--------------------------------------------------------------------------------------------
+
+
+Routes:
+
+- garagedoorRouter.js: itt hívjuk meg a "../controllers/garagedoorcontroller" controllert,
+az alábbi funkciókkal látottuk el:
+	router.post('/addDoor', addGaragedoor);
+	router.get('/', getDoors);
+	router.get('/:id', getDoorById);
+
+- orderRouter.js: 
+	itt hívjuk meg a "../controllers/OrderController" controllert, valamint a 
+	"../authentication/token_validation" controllerrel ellenőrizzük, hogy 
+	érvényes tokennel rendelkező kliens szeretne rendelést leadni, illetve hogy 
+	a bejelentkeztető után pröbál rendelést leadni
+az alábbi funkciókkal látottuk el:
+	router.post('/place', checkToken,placeOrder);
+	router.post('/addImage',addImage);
+
+-user.js:
+	itt hívjuk meg a "../controllers/PermissionController" controllert, melyen ellenőrizzük
+	a kliens rangját, jogosultságait, valamint a 
+	"../authentication/token_validation" controllerrel ellenőrizzük, hogy 
+	érvényes tokennel rendelkezik az adott kliens.
+	Továbbá meghíjuk a "../controllers/usercontroller" controllert, melyet az
+	alábbi funkciókkal látottuk el:
+		router.post('/register', createUser);
+		router.get('/', checkToken, getUsers);
+		router.get('/a', HowToUsePermission);
+		router.delete('/',deleteUser);
+		router.post("/login", login);
+		router.get('/:id',checkToken,getUserById);
+
+
+----------------------------------------------------------------------------------------------------
+
+
+Config: 
+
+
+- auth.js: 
+	Authentication:
+	a hitelesítés  egy állítás, például a 
+	számítógépes rendszer felhasználói azonosítójának bizonyítására szolgál. Az azonosítással ellentétben, egy személy 
+	vagy valaki személyazonosságának feltüntetésével, a hitelesítés az identitás igazolásának folyamata. Ez magában
+	foglalhatja a személyazonosító okmányok hitelesítését, a weboldal hitelességének igazolását digitális tanúsítvánnyal,
+	az alkotóelem életkorának meghatározását karbon randizással, vagy annak biztosítását, hogy egy termék vagy 
+	dokumentum ne legyen hamis.
+	
+
+
+- db.js:
+	itt határozzuk meg az adatbázisunk elérhetőségét, adatait:
+		const pool = createPool({
+    	host     : 'localhost',
+    	user     : 'root',
+    	password : '',
+    	database : 'garagedoordatabase',
+    	timezone : 'utc',
+   	 connectionLimit: 10
+	});
+	
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+
+authentification:
+
+
+- token_validation.js:
+	a fent említett javascriptet a következő funkciókkal láttuk el:
+	- checkToken: ellenőrizzük, hogy 
+	érvényes tokennel rendelkező kliens szeretne adatokhoz hzzáférni, illetve hogy 
+	szerepel-e az adatbázisban a megfelelő token.
+	A metódust tvábbi funkcióval láttuk el:
+	- getUserByToken: érvényes token alapján listázza az adott klienst.
+	Érvényes token esetén bejelentkezteti a felhasználót, ellenkező 
+	esetben hiba üzenetet hagy: "Access Denied! Unauthorized User"
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
       
     
     
