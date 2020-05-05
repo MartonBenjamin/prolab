@@ -30,7 +30,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-e="last_opened_file_path" value="$PROJECT_DIR$/../../test" />
+    e=&quot;last_opened_file_path&quot; value=&quot;/Users/norbertsass-gyarmati/Documents/GitHub/prolab/test&quot; /&gt;
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
@@ -63,6 +63,7 @@ e="last_opened_file_path" value="$PROJECT_DIR$/../../test" />
       <workItem from="1588011956218" duration="499000" />
       <workItem from="1588013797597" duration="64000" />
       <workItem from="1588058972577" duration="584000" />
+      <workItem from="1588698180391" duration="410000" />
     </task>
     <servers />
   </component>

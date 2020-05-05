@@ -1,4 +1,4 @@
-﻿BackEnd fejlesztők: Marton Benjámin, Sass-Gyarmati Norbert
+BackEnd fejlesztők: Marton Benjámin, Sass-Gyarmati Norbert
 
 Fejlesztői környezet: WebStorm NodeJS
 
@@ -29,6 +29,10 @@ controllers:
 -ordercontroller.js:
  a fent említett javascriptet a következő funkciókkal láttuk el: 
 	-placeOrder: adatbázishoz adja a leadott rendelési igényt.
+- OrderController.js:
+	a fent említett javascriptet a következő funkciókkal láttuk el: 
+	- placeOrder: itt tudunk rendeléseket leadni, dokumentálni. A funkciónk további
+	részekkel
     
     
 Services:
