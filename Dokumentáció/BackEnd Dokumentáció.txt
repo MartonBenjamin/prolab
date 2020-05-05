@@ -1,4 +1,6 @@
 BackEnd fejlesztők: Marton Benjámin, Sass-Gyarmati Norbert
+Szerkesztő: Sass-Gyarmati Norbert
+
 
 Fejlesztői környezet: WebStorm NodeJS
 
@@ -239,6 +241,107 @@ authentification:
 	esetben hiba üzenetet hagy: "Access Denied! Unauthorized User"
 	
 	
+	
+	
+---------------------------------------------------------------------------------------------------------
+
+
+bin
+
+
+- www.js:
+	a fent említett javascriptet a következő funkciókkal láttuk el:
+	#!/usr/bin/env node
+
+/**
+ * MModul függőségek
+ */
+
+var app = require('../app');
+var debug = require('debug')('garageapp:server');
+var http = require('http');
+
+/**
+ * Portszerzés, illetve annak tárolása Express-ben
+ * Portunk: 3000
+ */
+
+var port = normalizePort(process.env.PORT || '3000');
+app.set('port', port);
+
+/**
+ * Http szerver készítése
+ */
+
+var server = http.createServer(app);
+
+/**
+ * Minden hálózati felületen ugyanezen a porton lehessen hallani a szervert
+ */
+
+server.listen(port);
+server.on('error', onError);
+server.on('listening', onListening);
+
+/**
+ * Normalizálja a portot
+ */
+
+function normalizePort(val) {
+  var port = parseInt(val, 10);
+
+  if (isNaN(port)) {
+    // named pipe
+    return val;
+  }
+
+  if (port >= 0) {
+    // port number
+    return port;
+  }
+
+  return false;
+}
+
+/**
+ * Eseményfigyelő hiba eseményhez
+ */
+
+function onError(error) {
+  if (error.syscall !== 'listen') {
+    throw error;
+  }
+
+  var bind = typeof port === 'string'
+    ? 'Pipe ' + port
+    : 'Port ' + port;
+
+  // handle specific listen errors with friendly messages
+  switch (error.code) {
+    case 'EACCES':
+      console.error(bind + ' requires elevated privileges');
+      process.exit(1);
+      break;
+    case 'EADDRINUSE':
+      console.error(bind + ' is already in use');
+      process.exit(1);
+      break;
+    default:
+      throw error;
+  }
+}
+
+/**
+ * Eseményfigyelő Listener eseményhez
+
+function onListening() {
+  var addr = server.address();
+  var bind = typeof addr === 'string'
+    ? 'pipe ' + addr
+    : 'port ' + addr.port;
+  debug('Listening on ' + bind);
+}
+
 	
 	
 	
