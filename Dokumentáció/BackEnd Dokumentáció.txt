@@ -144,10 +144,13 @@ Services:
 	-  HowToUsePermission: itt lehet állítani az adott kliens rangját, engedélyt lehet adni
 	különböző jogosultságokra. Szoftverünk rangjai, engedélyei:
 		- User: Felhasználói rang, minden regisztrált kliens ebben a rangban van
+		joguk van regisztrációra, termékek megtekintésére, illetve azok
+		rendelésére
 		- Engineer: Mérnöki rang, jogosultságuk van hibát javítani, 
 		- Worker: Munkás rang, jogosultságuk van a megrendelések karbantartására, felügyeletére
 		- Support: támogatói rang
-		- Manager: menedzseri rang
+		- Manager: menedzseri rang, joga van megrendelések elfogadására, illetvereklamációk
+		kezelésére
 		- Supervisor: felügyelői rang
 
 - StyleService.js:
