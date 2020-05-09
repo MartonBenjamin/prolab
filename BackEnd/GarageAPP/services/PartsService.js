@@ -51,7 +51,7 @@ module.exports ={
 
     getPartsToDoor: (id,callBack)=>{
         pool.query(
-            'SELECT parts.name, parts.price AS priceperpart, count(parts.name) AS piece, SUM(price) AS SUM  FROM partstodoor INNER JOIN parts ON partstodoor.partid = parts.id WHERE doorid =? GROUP BY name',
+            'SELECT parts.name, parts.price AS priceperpart, partstodoor.amount, partstodoor.amount * parts.price as Total  FROM partstodoor INNER JOIN parts ON partstodoor.partid = parts.id WHERE doorid = ? GROUP BY name;',
             [
                 id
             ],
