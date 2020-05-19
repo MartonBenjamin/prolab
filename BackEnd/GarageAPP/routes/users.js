@@ -11,10 +11,9 @@ const{
 } = require("../controllers/usercontroller");
 
 router.post('/register', createUser);
-router.get('/', checkToken, getUsers);
-router.get('/a',checkToken,isWorker, getUsers);
-router.delete('/',deleteUser);
+router.get('/', checkToken, getUsers, isSupervisor);
+router.delete('/',checkToken, isSupervisor, deleteUser);
 router.post("/login", login);
-router.get('/:id',checkToken,getUserById);
+router.get('/:id',checkToken,isSupervisor, getUserById);
 
 module.exports = router;

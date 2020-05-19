@@ -34,8 +34,6 @@ module.exports = {
 
         });
     },
-    //TODO: getDoorTotalParts orderParts orderCompleted implementálása
-    //TODO: getDoorPrice mintájára egy fügvény, amely visszaadja, az árat, ha esetleg kedvezményes.
     getPartsToDoor:(req,res)=>{
       const id = req.params.id;
       getPartsToDoor(id, (err,results)=>{

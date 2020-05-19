@@ -1,4 +1,4 @@
-const {placeOrder,addImage, acceptOrder, refuseOrder} = require('../services/OrderService');
+const {placeOrder,addImage, acceptOrder, refuseOrder,addDoorToTrack,changeTrackDetails, getMyDoorsState, getMyOrders} = require('../services/OrderService');
 const {getUserIdByToken} = require("../services/UserService");
 let lastOrderId;
 module.exports=
@@ -49,6 +49,29 @@ module.exports=
                 })
             });
         },
+        getMyOrders:(req,res) =>{
+            let token = req.get("Authorization");
+            getUserIdByToken(token,(err,result) =>{
+                if(err){
+                    console.log(err);
+                }
+                else{
+                    let id = result.id;
+                    getMyOrders(id, (err, results) => {
+                        if (err) {
+                            console.log(err);
+                            return res.status(400).json({
+                                message: "Database error: " + err
+                            });
+                        }
+                        return res.status(201).json({
+                            orders: results
+                        });
+                    });
+                }
+            });
+
+        },
         acceptOrder: (req, res) => {
             const id = req.params.id;
             acceptOrder(id, (err, results) => {
@@ -83,4 +106,58 @@ module.exports=
                 });
             });
         },
+        addDoorToTrack: (req,res) =>{
+            const body = req.body;
+            addDoorToTrack(body, (err,result) =>{
+                if(err) {
+                    consol.log(err);
+                    return res.json({
+                        message: "Error: "+err
+                    });
+                }
+                return res.status(200).json({
+                    message: "Door added to track successfully!"
+                })
+            })
+        },
+        changeTrackDetails: (req,res) =>{
+            const body = req.body;
+            changeTrackDetails(body, (err,result) =>{
+                if(err) {
+                    consol.log(err);
+                    return res.json({
+                        message: "Error: "+err
+                    });
+                }
+                return res.status(200).json({
+                    message: "Track updated successful"
+                })
+            })
+
+        },
+        getMyDoorsState: (req,res) =>{
+            let token = req.get("Authorization");
+            getUserIdByToken(token,(err,result) =>{
+                if(err){
+                    console.log(err);
+                }
+                else{
+                    let id = result.id;
+                    console.log(id);
+                    getMyDoorsState(id, (err, results) => {
+                        if (err) {
+                            console.log(err);
+                            return res.status(400).json({
+                                message: "Database error: " + err
+                            });
+                        }
+                        return res.status(201).json({
+                            state: results
+                        });
+                    });
+                }
+            });
+
+        }
+
 }
