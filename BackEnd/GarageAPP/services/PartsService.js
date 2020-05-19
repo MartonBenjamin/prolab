@@ -29,7 +29,7 @@ module.exports ={
             }
         );
     },
-    orderCompleted:(data,callBack)=>{
+    partOrderCompleted:(data,callBack)=>{
         pool.query(
             'UPDATE parts SET ordered = ordered - ? WHERE id = ?;\n' +
             'UPDATE parts SET  amount = amount + ? WHERE id = ?; ',

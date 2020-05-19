@@ -1,6 +1,6 @@
 const {getMaterials} = require('../services/MaterialService');
 const {getStyles} = require('../services/StyleService');
-const {getDoorPrice,getParts,getPartsToDoor} = require('../services/PartsService');
+const {getDoorPrice,getParts,getPartsToDoor, getDoorTotalParts, partOrderCompleted, orderParts} = require('../services/PartsService');
 
 module.exports = {
     getMaterials: (req, res) => {
@@ -65,5 +65,54 @@ module.exports = {
         });
 
     },
+    getParts:(req,res)=>{
+        getParts((err, results) => {
+            if (err) {
+                console.log(err);
+                return;
+            }
+            return res.json({
+                success: 1,
+                data: results
+            });
+        });
+    },
+    getDoorTotalParts:(req,res) =>{
+      let id = req.params.id;
+      getDoorTotalParts(id,(err,results)=>{
+          if(err){
+              console.log(err);
+              return;
+          }
+          return res.json({
+              message:"The parts of the door with ID:"+id,
+              Parts: results
+          });
+      });
+    },
+    partOrderCompleted:(req,res)=>{
+        const body = req.body;
+        partOrderCompleted(body,(err,results)=>{
+            if(err){
+                console.log(err);
+                return;
+            }
+            return res.status(200).json({
+                message: "Confirmed order delivered."
+            })
+        })
+    },
+    orderParts:(req,res)=>{
+        const body = req.body;
+        orderParts(body, (err,results)=>{
+            if(err){
+                console.log(err);
+                return;
+            }
+            return res.status(200).json({
+                message: "Parts order added."
+            })
+        })
+    }
 
 };
