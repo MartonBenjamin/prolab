@@ -13,7 +13,6 @@ module.exports ={
 
         );
     },
-
     orderParts: (data,callBack) =>{
         pool.query(
             'UPDATE parts SET ' +

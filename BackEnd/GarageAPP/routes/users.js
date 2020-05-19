@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-const {HowToUsePermission} = require('../controllers/PermissionController');
 const { checkToken } = require("../authentication/token_validation");
 const { isWorker} = require('../authentication/userPermissions');
 const{

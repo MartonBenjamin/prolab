@@ -1,6 +1,10 @@
 const pool = require('../config/db');
 
 module.exports = {
+    changeGroupId: (data, callBack) =>
+    {
+
+    },
     create: (data,callBack) =>{
         var date = new Date();
         date = date.toISOString();

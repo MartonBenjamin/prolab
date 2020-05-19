@@ -36,5 +36,10 @@ module.exports ={
             }
         )
     },
+    acceptOrder:(data,callBack) =>{
+        pool.query(
+            ''
+        )
+    }
 
 };
