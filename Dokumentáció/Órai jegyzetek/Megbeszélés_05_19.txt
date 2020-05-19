@@ -1,0 +1,20 @@
+manager regisztrálása, (aki fogadja az üzeneteket)
+1. a rendszer automatikusan generál egy árajánlatot, amit a vevő vagy elfogad vagy nem. -> a paraméterek alapján számol egy árat (alkatrészek + anyagok * négyzetméterárral)
+
+
+-Rendelés menete-
+0. regisztrál a fehasználó
+1. belép a user
+2. kiválogatja az alkatrészeket és a felhasznált anyagokat
+3. feltölt képeket
+4. elfogadja vagy elutasítja az árajánlatot.
+
+
+
+jogosultsági szintek
+user
+worker
+manager
+supervisor
+	mindent csinál (hozzáad, töröl táblákat)
+	esetleg moderálja a felhasználókat, de ez csak plusz
