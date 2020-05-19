@@ -24,7 +24,7 @@ Igényelt üzleti folyamatok modellje kép
 A megrendelő ügyfele otthon, vagy akár a utazás közben is képes információt szeretni arról, hogy milyen garázskauk érhetők el a kínálatban. Esetleg egy kapu konfigurációt össze tud állítani és árajánlatot is tud kérni.  Így nem érheti meglepetés a beüzelemelést követően a számlán szereplő összeg miatt. Emellett az ügyfelek panaszt is tehetnek. A jobb kivitelezés érdekében a megrendelő fényképet is tud csatolni a megrendeléséhez. A rendszer generál egy árajánlatot. Ezt vagy elfogadja a felhasználó vagy elutasítja. Amelyiben elfogadja kezdőthet a tervezés és a gyártás. A tervezéstől a kivitelezésig nyomonkövethető a termék útja így az utólag is elemezhető. A beszerelés időpontjai is megtekinthetőek valamint a munkát végző szakemberek adatai. Ezen felül a munka terjesítésének időpontjáról is tájékoztatva vannak a megrendelők és a kapcsolatot tudják tartani.
 
 ## 4. Funkcionális leírás
-XXXXXXXXXXXX
+Az összes ügyfél számára látható az éppen elérhető garázskapuk, valamint az összeállítás után a rendszer által generált árajánlatot elutasítják vagy elfogadják. Azonban csak a garázskapukkal kapcsolatos adatokat csak a supervisor képes módosítani. Leggyakoribb használati esetek között szerepel az ügyfelek böngészése a webshopban, illetve a munkások által elvégzett feladatok dokumentálása. Valamint az árajánlatok generálása, elfogadása és elutasítása.
 
 ## 5. Fizikai környezet
 Az alkalmazás bármilyen operációs rendszeren futtatható mivel egy webes alkalmazásról van szó, és a különböző böngészők képesek értelmezni. Ebből adódóan nem igényel hatalmas erőforrásokat, egy internetezésre alkalmas számitógép/laptop képes hiba nélkül futtatni az alkalmazást.
