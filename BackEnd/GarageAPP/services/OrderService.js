@@ -33,10 +33,33 @@ module.exports ={
             }
         )
     },
-    acceptOrder:(data,callBack) =>{
+    acceptOrder:(id,callBack) =>{
         pool.query(
-            ''
-        )
+            'UPDATE orders SET ' +
+            'isAccepted = 1 WHERE id = ?',
+            [id],
+            (error, results) => {
+                console.log(id);
+                if (error) {
+                    return callBack(error);
+                }
+                return callBack(null, results);
+            }
+        );
+    },
+    refuseOrder:(id,callBack) =>{
+        pool.query(
+            'UPDATE orders SET ' +
+            'isAccepted = 0 WHERE id = ?',
+            [id],
+            (error, results) => {
+                console.log(id);
+                if (error) {
+                    return callBack(error);
+                }
+                return callBack(null, results);
+            }
+        );
     }
 
 };

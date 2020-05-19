@@ -1,4 +1,4 @@
-const {placeOrder,addImage} = require('../services/OrderService');
+const {placeOrder,addImage, acceptOrder, refuseOrder} = require('../services/OrderService');
 const {getUserIdByToken} = require("../services/UserService");
 let lastOrderId;
 module.exports=
@@ -48,5 +48,39 @@ module.exports=
                     description: "Image added successfully to order: "+lastOrderId
                 })
             });
-        }
+        },
+        acceptOrder: (req, res) => {
+            const id = req.params.id;
+            acceptOrder(id, (err, results) => {
+                if (err) {
+                    console.log(err);
+                    return;
+                }
+                if (!results) {
+                    return res.json({
+                        message: "There is no order with the ID:"+id
+                    });
+                }
+                return res.json({
+                    message: "You accepted the order!"
+                });
+            });
+        },
+        refuseOrder: (req, res) => {
+            const id = req.params.id;
+            refuseOrder(id, (err, results) => {
+                if (err) {
+                    console.log(err);
+                    return;
+                }
+                if (!results) {
+                    return res.json({
+                        message: "There is no order with the ID:"+id
+                    });
+                }
+                return res.json({
+                    message: "You refused the order!"
+                });
+            });
+        },
 }
