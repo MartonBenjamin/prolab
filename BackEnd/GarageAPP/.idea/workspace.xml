@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="044fc7f5-1a5f-4d2f-9529-a1026a0e9340" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/db.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/garagedoorRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/garagedoorRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/orderRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/orderRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/MessageService.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/MessageService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/OrderService.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/OrderService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/UserService.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/UserService.js" afterDir="false" />
-    </list>
+    <list default="true" id="044fc7f5-1a5f-4d2f-9529-a1026a0e9340" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
