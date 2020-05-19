@@ -13,8 +13,9 @@ module.exports = {
                         message: "There is no user with the ID:"+id
                     });
                 }
-                switch(results) {
-                    case "User":
+                let result = results[0].groupid;
+                switch(result) {
+                    case 1:
                         return res.json({
                             message: "User"
                         });

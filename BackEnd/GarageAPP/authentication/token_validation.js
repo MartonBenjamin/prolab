@@ -3,7 +3,7 @@ const keys = require("../config/auth");
 const {getUserByToken} = require("../services/UserService");
 module.exports = {
     checkToken: (req, res, next) => {
-        var loggedUser;
+        let loggedUser;
         let token = req.get("Authorization");
         if (token) {
             jwt.verify(token, keys.secretOrKey, (err, decoded) => {
@@ -13,26 +13,17 @@ module.exports = {
                         message: "Invalid Token..."
                     });
                 } else {
-                    /*
-                   addToken(data,(err) =>{
-                    if(err){
-                        console.log(err);
-                    }
-                    }
-                );
-
-                     */
                     getUserByToken(token,(err,result) =>{
                         if(err){
                             console.log(err);
                         }
                         else{
                             loggedUser = result.username;
-                            console.log(loggedUser);
+                            console.log(loggedUser +"'s request:");
                         }
                     });
                     req.decoded = decoded;
-                    console.log(token);
+                    //console.log(token);
                     next();
                 }
             });
