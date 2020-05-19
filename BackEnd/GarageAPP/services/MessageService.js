@@ -1,9 +1,9 @@
 const pool = require('../config/db');
 module.exports ={
-    sendMessage:(data,callBack)=>{
+    sendMessage:(data,callBack) =>{
         pool.query(
-            'INSERT INTO messages (from, to, message,)' +
-            'VALUES(?,?,?)',
+            'INSERT INTO messages (messages.from, messages.to, messages.message) ' +
+            'VALUES (?,?,?)',
             [
                 data.from,
                 data.to,
@@ -19,9 +19,10 @@ module.exports ={
     },
     getMyMessages: (id,callBack) => {
         pool.query(
-            'SELECT messages.from, message FROM messages WHERE to = ?',
+            'SELECT messages.from, messages.message FROM messages WHERE messages.to = ?',
             [id],
             (error, results) => {
+                console.log(id);
                 if (error) {
                     return callBack(error);
                 }
@@ -31,7 +32,7 @@ module.exports ={
     },
     getManagerMessages: callBack=>{
         pool.query(
-            'SELECT messages.from, message FROM messages WHERE to = 111',
+            'SELECT messages.from, messages.message FROM messages WHERE messages.to = 111',
             [],
             (error,results) => {
                 if (error) {

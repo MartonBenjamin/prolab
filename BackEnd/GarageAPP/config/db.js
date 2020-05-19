@@ -5,8 +5,7 @@ const pool = createPool({
     user     : 'root',
     password : '',
     database : 'garagedoordatabase',
-    timezone : 'utc',
-    connectionLimit: 10
+    timezone : 'utc'
 });
 
 

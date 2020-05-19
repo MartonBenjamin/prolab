@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const { checkToken } = require("../authentication/token_validation");
-const { isWorker} = require('../authentication/userPermissions');
+const { isWorker, isManager ,isSupervisor} = require('../authentication/userPermissions');
 const{
     createUser,
     getUsers,

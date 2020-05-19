@@ -1,14 +1,11 @@
 const pool = require('../config/db');
 module.exports ={
     placeOrder:(data, callBack) =>{
-        var date = new Date();
-        date = date.toISOString();
         pool.query(
-            'INSERT INTO orders (ordered_by, order_date, description) '+
-            'VALUES(?,?,?)',
+            'INSERT INTO orders (ordered_by, description) '+
+            'VALUES(?,?)',
             [
                 data.ordered_by,
-                date,
                 data.description
             ],
             (error,results) => {

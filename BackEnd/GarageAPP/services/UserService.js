@@ -6,18 +6,15 @@ module.exports = {
 
     },
     create: (data,callBack) =>{
-        var date = new Date();
-        date = date.toISOString();
         pool.query(
-            'INSERT INTO users (username, password, email, firstname, lastname, created_at) ' +
-            'VALUES(?,?,?,?,?,?)',
+            'INSERT INTO users (username, password, email, firstname, lastname) ' +
+            'VALUES(?,?,?,?,?)',
             [
                 data.username,
                 data.password,
                 data.email,
                 data.first_name,
-                data.last_name,
-                date
+                data.last_name
             ],
             (error,results,fields) =>{
                 if(error){//ha van result, akkor error null, ha nem, akkor hibánk van

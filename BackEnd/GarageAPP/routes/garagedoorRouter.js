@@ -3,6 +3,7 @@ var router = express.Router();
 
 const {addGaragedoor,getDoors,getDoorById} = require('../controllers/garagedoorcontroller');
 const{getDoorPrice,getPartsToDoor} = require('../controllers/SelectController');
+const { isWorker, isManager ,isSupervisor} = require('../authentication/userPermissions');
 
 router.post('/addDoor', addGaragedoor);
 router.get('/', getDoors);
