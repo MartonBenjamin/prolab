@@ -7,7 +7,11 @@ A projekt célja egy olyan webes felület létrehozása amely támogatni képes 
 A webes alkalmazásban a supervisornak van a legnagyobb jogköre. Amíg a weboldalra látogató csak megtekintheti az elérhető garázskapukat, addig a regisztrált felhasználók rendléseket adhanak le, amikhez fényképeket is csatolhatnak. A manager tartja az ügyfelekkel a kapcsolatot. A munkások végzik a telepítéssel, szervízeléssel kapcsolatos adatok karbantartásást. A rendszer generálja le az árajánlatot, így a managernek ennek ellenőrzése és ügyintézése marad.
 
 #### Az alkalmazáson dolgozók:
-Táblázat a csapattagokról persze md-ben
+|    Név      | Szak |
+| ----------- | ----------- |
+| Sas-Gyarmati Norbert | programtervező informatikus |
+| Marton Benjámin | programtervező informatikus |
+| Soós Gergő | programtervező informatikus |
 
 ## 3. Üzleti folyamatok modellje
 Jelenlegi üzleti folyamatok modellje kép
