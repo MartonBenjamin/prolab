@@ -47,7 +47,7 @@
 | A tesztelés előfeltételei | A felhasználók számára csak az aktuálisan elérhető garázskapuk láthatók, míg a supervisor számára minden garázskapu, alkatrész és annak jelenlegi státusza is, valamint képes módosítani a termékekek státuszát.  |
 | A tesztelés dátuma és időpontja | 2020.04.25. |
 | A tesztadatok típusa | Képes / Szöveges |
-| A tesztet végző személy(ek) | Sas-Gyarmati Norbert |
+| A tesztet végző személy(ek) | Sass-Gyarmati Norbert |
 | A tesztelt rendszer beállításai | Zárt rendszer, csak fejlesztők hozzáférésével. |
 | A teszt-eset elvárt eredménye | - |
 | A tesztelés eredménye | Megfelelt megjegyzésekkel |
