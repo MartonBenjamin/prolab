@@ -9,7 +9,7 @@ A webes alkalmazásban a supervisornak van a legnagyobb jogköre. Amíg a webold
 #### Az alkalmazáson dolgozók:
 |    Név      | Szak |
 | ----------- | ----------- |
-| Sas-Gyarmati Norbert | programtervező informatikus |
+| Sass-Gyarmati Norbert | programtervező informatikus |
 | Marton Benjámin | programtervező informatikus |
 | Soós Gergő | programtervező informatikus |
 
