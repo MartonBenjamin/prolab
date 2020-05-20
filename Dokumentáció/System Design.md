@@ -12,7 +12,7 @@ In the web application, the supervisor has the most authority. As long as a visi
 | ----------- | ----------- | ----------- |
 | Norbert Sass-Gyarmati | Software engineer | BackEnd, documentation |
 | Benjámin Marton | Software engineer | BackEnd, documentation |
-| Gergő Soós | Software engineer |  Adatbázis, documentation |
+| Gergő Soós | Software engineer |  Database, documentation |
 | Flórián Vincze | Software engineer | Frontend |
 | Edina Móni | Software engineer | Frontend |
 
