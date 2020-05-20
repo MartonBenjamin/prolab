@@ -12,6 +12,8 @@ A webes alkalmazásban a supervisornak van a legnagyobb jogköre. Amíg a webold
 | Sass-Gyarmati Norbert | programtervező informatikus | BackEnd, dokumentáció |
 | Marton Benjámin | programtervező informatikus | BackEnd, dokumentáció |
 | Soós Gergő | programtervező informatikus |  Adatbázis, dokumentáció |
+| Vincze Flórián | programtervező informatikus | Frontend |
+| Edina Móni | programtervező informatikus | Frontend |
 
 ## 3. Üzleti folyamatok modellje
 ![JelenlegiiFolyamatokRendelés](Képek/jelenlegi.jpg)
