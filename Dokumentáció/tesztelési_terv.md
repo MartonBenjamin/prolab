@@ -59,7 +59,7 @@ A teszt sikerességének kritériumai:</br>
 
 | Cím | Felelős személy | Szállítás gyakorisága | Szállítás módja |
 |----|----|----|----|
-| Tesztterv | Felelős személy | Szállítás gyakorisága | Szállítás módja |
+| Tesztterv | Felelős személy | - | GitHub |
 | Teszt-esetek | Marton Benjámin | - | GitHub |
 | Tesztjegyzőkönyvek| Soós Gergő | - | GitHub |
 | Tesztelési jelentés | Soós Gergő | Egyszer a projekt végén | GitHub |
