@@ -3,23 +3,33 @@ const pool = require('../config/db');
 module.exports = {
     changeGroupId: (data, callBack) =>
     {
+        pool.query(
+            'UPDATE users SET groupid = ? WHERE username=?',
+            [
+                data.groupid,
+                data.username
+            ],
+            (error,results)=>{
+                if(error){
+                    return callBack(error);
+                }
+                return callBack(null,results);
+            }
+        )
 
     },
     create: (data,callBack) =>{
-        var date = new Date();
-        date = date.toISOString();
         pool.query(
-            'INSERT INTO users (username, password, email, firstname, lastname, created_at) ' +
-            'VALUES(?,?,?,?,?,?)',
+            'INSERT INTO users (username, password, email, firstname, lastname) ' +
+            'VALUES(?,?,?,?,?)',
             [
                 data.username,
                 data.password,
                 data.email,
                 data.first_name,
-                data.last_name,
-                date
+                data.last_name
             ],
-            (error,results,fields) =>{
+            (error,results) =>{
                 if(error){//ha van result, akkor error null, ha nem, akkor hibánk van
                     return callBack(error);
                 }
@@ -31,7 +41,7 @@ module.exports = {
         pool.query(
             'select id, username, firstname, lastname, email from users',
             [],
-            (error,results,fields) => {
+            (error,results) => {
                 if(error){
                    return callBack(error);
                 }
@@ -70,7 +80,7 @@ module.exports = {
             pool.query(
                 'delete from users where id =?',
                 [data.id],
-                (error,results,fields) =>{
+                (error,results) =>{
                     if (error){
                         callBack(error);
                     }
