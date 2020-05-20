@@ -34,7 +34,7 @@
 | A tesztelés előfeltételei | Hozzáférés a backendben generálódó adatokhoz |
 | A tesztelés dátuma | 2020.05.05. |
 | A tesztadatok típusa | Képes |
-| A tesztet végző személy(ek) | Sas-Gyarmati Norbert |
+| A tesztet végző személy(ek) | Sass-Gyarmati Norbert |
 | A tesztelt rendszer beállításai | Zárt rendszer, csak fejlesztők hozzáférésével. |
 | A teszt-eset elvárt eredménye | - |
 | A tesztelés eredménye | Nem megfelelt |
