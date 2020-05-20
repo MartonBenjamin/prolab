@@ -25,6 +25,11 @@ AZ EURÓPAI PARLAMENT ÉS A TANÁCS 1169/2011/EU RENDELETE (2011. október 25.) 
 A jelenlegi rendszerben a kisvállalkozás nem rendelketik weboldallal ezért a helyi újságokban, rádiókban és egyéb online lehetőségek segítségével hirdetnek. Így a megrendelőnek le kell mérnie az épület azon részeit ahova a garázskaput szeretné. Ezek után az adatokkal és az eképzeléssel fel kell hívnia a kisvállalatot. A telefon mellett nem mindig található olyan munkatárs, aki biztosan fel tudja venni a megrendelést vagy kezelni tudja a felmerült problémákat. A munkák, az egyes termékekkel kapcsolatos adatok, munkafolyamatok, munkaidő beosztások nyilvántartása táblázatokban tárolódnak és papíron. Ezek rendszertelenül kerülnek egyeztetésre. Rendszerint akkor ha valamilyen hiány vagy probléma merül fel. Az árajánlat kalkulása valamint a beszerelni kívánt garázskapu paraméterein túl nincsen információjuk arról, hogy milyen adottságú helyre történik a megrendelés. A megrendelést és az áraajánlat elfogadása után megtervezésre és legyártásra kerül a termék és a szerelőcsapat megkezdi a beszerelést, beüzemelést. Ezek dokumentálása csúszással történik. Az utólagos reklamációra, felmerült kérdésre, problémára szintén telefonon van lehetőség.
 
 # 6. Igényelt üzleti folyamatok modellje
+## Árajánlat elfogadás és fizetés
+![IgényeltÜzletiFolyamatokRendelés](Képek/igenyelt.jpg)<br/>
+
+## A garázskapuk legyártása és telepítése
+![IgényeltÜzletiFolyamatokGarázsLegyártás](Képek/igenyelt_2.jpg)
 
 A megrendelő ügyfele otthon, vagy akár a utazás közben is képes információt szeretni arról, hogy milyen garázskauk érhetők el a kínálatban. Esetleg egy kapu konfigurációt össze tud állítani és árajánlatot is tud kérni.  Így nem érheti meglepetés a beüzelemelést követően a számlán szereplő összeg miatt. Emellett az ügyfelek panaszt is tehetnek. A jobb kivitelezés érdekében a megrendelő fényképet is tud csatolni a megrendeléséhez. A rendszer generál egy árajánlatot. Ezt vagy elfogadja a felhasználó vagy elutasítja. Amelyiben elfogadja kezdőthet a tervezés és a gyártás. A tervezéstől a kivitelezésig nyomonkövethető a termék útja így az utólag is elemezhető. A beszerelés időpontjai is megtekinthetőek valamint a munkát végző szakemberek adatai. Ezen felül a munka terjesítésének időpontjáról is tájékoztatva vannak a megrendelők és a kapcsolatot tudják tartani.
 
