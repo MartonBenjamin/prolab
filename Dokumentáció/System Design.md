@@ -17,7 +17,7 @@ In the web application, the supervisor has the most authority. As long as a visi
 | Edina Móni | Software engineer | Frontend |
 
 ## 3. Business process model
-[JelenlegiiFolyamatokRendelés] (images / jelenlegi.jpg)
+![JelenlegiiFolyamatokRendelés](Képek/jelenlegi.jpg)
 
 Under the current system, a small business does not have a website so they advertise in local newspapers, radio and other online opportunities. Thus, the customer must weigh the parts of the building where he wants the garage door. You then need to call the small business with the data and imagination. There is not always a staff member next to the phone who can be sure to pick up the order or deal with any problems that may arise. Jobs, data related to each product, workflows, work schedule records are stored in tables and on paper. These are negotiated irregularly. Usually when there is a deficiency or problem. In addition to the calculation of the price offer and the parameters of the garage door to be installed, they do not have information on the location of the order. After accepting the order and the price offer, the product will be designed and manufactured and the assembly team will start the installation and commissioning. These are documented by sliding. It is also possible to make a subsequent complaint, question or problem by phone.
 
