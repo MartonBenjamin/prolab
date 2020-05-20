@@ -7,13 +7,14 @@ The aim of the project is to create a web interface that can support the busines
 In the web application, the supervisor has the most authority. As long as a visitor to the website can only view the available garage doors, registered users can place orders to which they can attach photos. The manager keeps in touch with customers. The workers perform the maintenance of the data related to the installation and service. The system generates the quote, leaving the manager to control and administer it.
 
 #### Those working on the application:
-| Name Department | Roles
+
+|    Name      | Department |  Roles |
 | ----------- | ----------- | ----------- |
-| Norbert Sass-Gyarmati | program designer IT BackEnd, documentation |
-| Benjámin Marton | program designer IT BackEnd, documentation  |
-| Gergő Soós | program designer IT Database, documentation  |
-| Vincze Flórián | program designer IT Frontend |
-| Edina Móni | program designer IT Frontend |
+| Norbert Sass-Gyarmati | Software engineer | BackEnd, documentation |
+| Benjámin Marton | Software engineer | BackEnd, documentation |
+| Gergő Soós | Software engineer |  Adatbázis, documentation |
+| Flórián Vincze | Software engineer | Frontend |
+| Edina Móni | Software engineer | Frontend |
 
 ## 3. Business process model
 [JelenlegiiFolyamatokRendelés] (images / jelenlegi.jpg)
