@@ -5,10 +5,10 @@ Frontend <strong> HomePage </strong>, <strong> RegisterPage </strong>, <strong> 
 
 Testing on the front end is performed by testers who walk through the pages, functions and check that both the appearance and the buttons and fields work properly. On the backend, an algorithm is used to load the database and the server, as well as the various functions / components with the help of testers. The program used to test the backend is primarily <strong> Postman </strong>. </br>
 
-| Name and function of the environment  | Method of access Configuration |  Contact person (s)  |
-| ----- | ------ | ----- | ----- |
-| Frontend: Building and implementing the elements on the site. | Equip the site with user-friendly elements. As well as creating roles is a suitable design. Displays the components in the backend. | Browser - | Vincóri Flórián |
-| Backend: Build the logic behind the page. | Establishing a database connection MySql Workbench | - | Marton Benjámin |
+| Name and function of the environment | Method of access | Configuration | Contact person(s) |
+|-----|------|-----|-----|
+| Frontend: Building and implementing the elements on the site. Equip the site with user-friendly elements. As well as creating roles is a suitable design. Displays the components in the backend. | Browser | - | Vincze Flórián |
+| Backend: Build the logic behind the page. | Establishing a database connection  | MySql Workbench | - | Marton Benjámin |
 | Database: Proper, secure storage of data generated on the site. | Postman | - | Marton Benjámin |
 
 ## Introduction
