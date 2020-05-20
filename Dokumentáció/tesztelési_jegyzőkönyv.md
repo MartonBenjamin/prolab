@@ -1,6 +1,7 @@
 # Tesztelési jegyzőkönyv
 
-## 1. jegyzőkönyv
+| 1. | Tesztelési jegyzőköny |
+|----|----|
 | A tesztelési-eset leírása és célja | Belépés csak a megfelelő adatok megadásával. |
 | A tesztelt folyamat/funckió leírása | teszt során megbizonyosodtunk abban, hogy az oldalra csak regisztrált személyek léphetnek be. Tehát csakis az adatbázisban eltárolt felhasználónév, jelszó párossal lehet belépni.  |
 | A tesztelés előfeltételei | Az adatbázisbán eltárolt felhasználónév és jelszó páros, a weboldalon elérhető Loginform. |
@@ -13,7 +14,8 @@
 | A tesztelés eredménye | Megfelelt megjegyzésekkel |
 | Megjegyzés | A frontend hiányában csak az adatbázisból lekérdezés útján lehetett leellenőrizni. |
 
-## 2. jegyzőkönyv
+| 2. | Tesztelési jegyzőköny |
+|----|----|
 | A tesztelési-eset leírás és célja | Az adatok biztonságos tárolása |
 | A tesztelt folyamat/funckió leírása | Biztosítani, hogy az adatok illetéktelen személy nem férhet hozzá csak az erre jogosultak. |
 | A tesztelés előfeltételei | Az adattárolás megfelelő kiépítése az adatbázisban. |
@@ -25,7 +27,8 @@
 | A tesztelés eredménye | Nem megfelelt |
 | Megjegyzés | A sikertelenség oka, hogy  nem volt frontend így a weboldalról történő behatolás nem volt szimulálható ilyen formában. |
 
-## 3. jegyzőkönyv
+| 3. | Tesztelési jegyzőköny |
+|----|----|
 | A tesztelési-eset leírás és célja | Az információk egyszerű és érthető megjelenítése a felhasználók számára |
 | A tesztelt folyamat/funckió leírása | A felhasználók számára minden az oldalon megjelenített tartalom egyértelmű és tisztán érthető. |
 | A tesztelés előfeltételei | Hozzáférés a backendben generálódó adatokhoz |
@@ -37,7 +40,8 @@
 | A tesztelés eredménye | Nem megfelelt |
 | Megjegyzés | Frontend hiányában ezt a tesztet nem sikerült elvégezni. |
 
-## 4. jegyzőkönyv
+| 4. | Tesztelési jegyzőköny |
+|----|----|
 | A tesztelési-eset leírás és célja | A garázskapuk megfelelő kilistázása a weboldalon mind a felhasználók mind a dolgozók számára |
 | A tesztelt folyamat/funckió leírása |  |
 | A tesztelés előfeltételei | A felhasználók számára csak az aktuálisan elérhető garázskapuk láthatók, míg a supervisor számára minden garázskapu, alkatrész és annak jelenlegi státusza is, valamint képes módosítani a termékekek státuszát.  |
