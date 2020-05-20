@@ -8,7 +8,7 @@ Testing on the front end is performed by testers who walk through the pages, fun
 | Name and function of the environment | Method of access | Configuration | Contact person(s) |
 |-----|------|-----|-----|
 | Frontend: Building and implementing the elements on the site. Equip the site with user-friendly elements. As well as creating roles is a suitable design. Displays the components in the backend. | Browser | - | Vincze Flórián |
-| Backend: Build the logic behind the page. | Establishing a database connection  | MySql Workbench | - | Marton Benjámin |
+| Backend: Build the logic behind the page. Establishing a database connection  | MySql Workbench | - | Marton Benjámin |
 | Database: Proper, secure storage of data generated on the site. | Postman | - | Marton Benjámin |
 
 ## Introduction
