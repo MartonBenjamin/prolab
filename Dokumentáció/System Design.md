@@ -23,8 +23,8 @@ Under the current system, a small business does not have a website so they adver
 
 ### Required Business Process Model:
 
-[Requested Business Process Order] (images / igenyelt.jpg)
-[IgényeltÜzletiFolyamatokGarázsLegyártás] (images / igenyelt_2.jpg)
+![IgényeltÜzletiFolyamatokRendelés](Képek/igenyelt.jpg)
+![IgényeltÜzletiFolyamatokGarázsLegyártás](Képek/igenyelt_2.jpg)
 
 The customer of the customer is able to love information about what kind of garages are on offer at home or even while traveling. You may be able to compile a gateway configuration and request a quote. This way, you should not be surprised by the amount on the invoice after commissioning. Customers can also make a complaint. For better execution, the customer can also attach a photo to his order. The system generates a quote. This is either accepted by the user or rejected. In which you accept you can start designing and manufacturing. From design to execution, the path of the product can be traced so that it can be analyzed afterwards. The dates of the installation can also be viewed, as well as the details of the specialists performing the work. In addition, the customers are informed about the time of completion of the work and can keep in touch.
 
