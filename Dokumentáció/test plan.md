@@ -26,7 +26,9 @@ As we approach the final weeks of development, members of the development team w
 
 ## Expectations to be tested
 
-| Serial number Name
+## Expectations to be tested
+
+| Serial number | Name  |
 | --- | --- |
 | 1. | Log in only by entering the correct data. |
 | 2. | Unobstructed navigation on the site. |
@@ -38,7 +40,7 @@ As we approach the final weeks of development, members of the development team w
 
 
 ## Tested expectations
-| Serial number Name
+| Serial number | Name
 | --- | --- |
 | 1. | Log in only by entering the correct data. |
 | 2. | - |
@@ -57,9 +59,21 @@ Criteria for test success: </br>
 
 ## Documents to be delivered
 
-| Title Responsible person Frequency of delivery Mode of transport
+| Title | Responsible person |  Frequency of delivery | Mode of transport
 | ---- | ---- | ---- | ---- |
-| Test plan | Responsible person - | GitHub |
+| Test plan | Responsible person  | - | GitHub |
 | Test cases  | Marton Benjámin | - | GitHub |
-| Test Protocols | Gergő Soós - | GitHub |
-| Test report | Gergő Soós Once at the end of the project GitHub |
+| Test Protocols | Gergő Soós | - | GitHub |
+| Test report | Gergő Soós  | Once at the end of the project  | GitHub |
+
+
+
+
+
+
+
+
+
+
+
+
