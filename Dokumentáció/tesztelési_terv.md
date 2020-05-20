@@ -5,8 +5,8 @@ Frontenden <strong>HomePage</strong>, <strong>RegisterPage</strong>, <strong>Con
 
 A tesztelést frontend részen tesztelők végzik akik végig járják az oldalakat, funkciókat és ellenőrzik, hogy mind a megjelenés, mind pedig a gombok, mezők megfelelően működnek-e. Backenden pedig egy algoritmussal terhelni az adatbázist illetve a szervert, valamint tesztelők közreműködésével a különböző funkciókat/komponenseket. A backend teszteléséhez használatos program első sorban az <strong>Postman</strong>.</br>
 
-| Tesztkörnyezet |
 | Környezet neve és feladata | A hozzáférés módja | Konfiguráció | Kapcsolattartó személy(ek) |
+|-----|------|-----|-----|
 | Frontend: Az oldalon található elemek kiépítése, implementálása. Az oldal felruházáa felhasználóbarát elemekkel. Valamint szerepkörök kialakításáea alkalmas design. A backendben található komponensek megjelenítése. | Böngésző | - | Vincze Flórián |
 | Backend: Az oldal mögött található logika kiépítése. Adatbáziskapcsolat kiépítése.| MySql Workbench | - | Marton Benjámin |
 | Adatbázis: Az oldalon keletkezett adatok megfelelő, biztonságos tárolása. | Postman | - | Marton Benjámin |
