@@ -9,11 +9,11 @@ In the web application, the supervisor has the most authority. As long as a visi
 #### Those working on the application:
 | Name Department | Roles
 | ----------- | ----------- | ----------- |
-| Norbert Sass-Gyarmati | program designer IT BackEnd, documentation
-| Benjámin Marton | program designer IT BackEnd, documentation
-| Gergő Soós | program designer IT Database, documentation
-| Vincze Flórián | program designer IT Frontend
-| Edina Móni | program designer IT Frontend
+| Norbert Sass-Gyarmati | program designer IT BackEnd, documentation |
+| Benjámin Marton | program designer IT BackEnd, documentation  |
+| Gergő Soós | program designer IT Database, documentation  |
+| Vincze Flórián | program designer IT Frontend |
+| Edina Móni | program designer IT Frontend |
 
 ## 3. Business process model
 [JelenlegiiFolyamatokRendelés] (images / jelenlegi.jpg)
