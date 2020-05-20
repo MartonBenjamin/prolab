@@ -35,7 +35,7 @@
 | A tesztelés dátuma | 2020.05.05. |
 | A tesztadatok típusa | Képes |
 | A tesztet végző személy(ek) | Sas-Gyarmati Norbert |
-| A tesztelt rendszer beállításai |  |
+| A tesztelt rendszer beállításai | Zárt rendszer, csak fejlesztők hozzáférésével. |
 | A teszt-eset elvárt eredménye | - |
 | A tesztelés eredménye | Nem megfelelt |
 | Megjegyzés | Frontend hiányában ezt a tesztet nem sikerült elvégezni. |
@@ -43,7 +43,7 @@
 | 4. | Tesztelési jegyzőkönyv |
 |----|----|
 | A tesztelési-eset leírás és célja | A garázskapuk megfelelő kilistázása a weboldalon mind a felhasználók mind a dolgozók számára |
-| A tesztelt folyamat/funckió leírása |  |
+| A tesztelt folyamat/funckió leírása | A felhasználók számára csak az aktuálisan elérhető garázskapuk és alkatrészeik láthatók, míg az alkalmazottak számára minden termék és annak jelenlegi státusza is, valamint a supervisor képes módosítani az összes adatot|
 | A tesztelés előfeltételei | A felhasználók számára csak az aktuálisan elérhető garázskapuk láthatók, míg a supervisor számára minden garázskapu, alkatrész és annak jelenlegi státusza is, valamint képes módosítani a termékekek státuszát.  |
 | A tesztelés dátuma és időpontja | 2020.04.25. |
 | A tesztadatok típusa | Képes / Szöveges |
