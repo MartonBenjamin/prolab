@@ -37,7 +37,16 @@ A megrendelő ügyfele otthon, vagy akár utazás közben is képes információ
 
 # 7. Követelménylista
 
-Ide még kelleni fog rész.
+|Sorszám| Követelmény neve |
+|----|----|
+| 1. | Felhasználók bejelentkezése |
+| 1. | Felhasználók kijelentkezése |
+| 2. | Felhasználók regisztrálása. |
+| 3. | Garázskapuk kilistázása. |
+| 4. | Garázskapuk kilistázása a regisztrált felhasználóknak. |
+| 5. | Termék legyártása közbeni állapotainak nyilvántartása. |
+| 6. | A csomagolt termék nyomon követése |
+| 7. | A készlet beállítása sz ügyfél számára |
 
 # 8. Használati esetek
 Az alkalmazás használati esetei közül a leggyakoribb amikor a felhasználók a weboldalon keresztül garázskapukat állítanak össze és megrendelést adnak le.
@@ -65,7 +74,17 @@ A manager karbantartja a garázskapuk technikai adatait.
 
 # 12. Funkció – követelmény megfeleltetés
 
-Ide még kelleni fog rész.
+
+|Sorszám| Követelmény neve | Funkció neve |
+|----|----|----|
+| 1. | Felhasználók bejelentkezése | Login  |
+| 1. | Felhasználók kijelentkezése | Logout  |
+| 2. | Felhasználók regisztrálása. | Register |
+| 3. | Garázskapuk kilistázása. | ListInventory |
+| 4. | Garázskapuk kilistázása a regisztrált felhasználóknak. | ListInventoryForClient |
+| 5. | Termék legyártása közbeni állapotainak nyilvántartása. | SetInventoryForWorkers |
+| 6. | A csomagolt termék nyomon követése | TrackPackedProduct |
+| 7. | A készlet beállítása sz ügyfél számára | SetInventoryForClient|
 
 # 13. Fogalomszótár
 NodeJS: A Node.js (vagy másnéven Node) egy rendszer, melyben JavaScriptben írhatunk szerver oldali alkalmazásokat. Maga a rendszer C/C++-ban íródott, és egy esemény alapú I/O rendszert takar a Google V8 JavaScript motorja felett.
