@@ -35,7 +35,16 @@ A megrendelő ügyfele otthon, vagy akár a utazás közben is képes informáci
 
 ## 7.Követelmény lista
  
-Ide még kelleni fog rész.
+|Sorszám| Követelmény neve |
+|----|----|
+| 1. | Felhasználók bejelentkezése |
+| 1. | Felhasználók kijelentkezése |
+| 2. | Felhasználók regisztrálása. |
+| 3. | Garázskapuk kilistázása. |
+| 4. | Garázskapuk kilistázása a regisztrált felhasználóknak. |
+| 5. | Termék legyártása közbeni állapotainak nyilvántartása. |
+| 6. | A csomagolt termék nyomon követése |
+| 7. | A készlet beállítása sz ügyfél számára |
 
 ## 8.Fogalom szótár
 
